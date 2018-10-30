@@ -1,6 +1,9 @@
 alias code="code-insiders"
+
+# Ultility to code remote stuff on editor by tunneling
 alias alia="ssh -R 52698:localhost:52698 alia.ml"
 
+# Docker utils
 alias stop="docker-compose kill"
 alias restart="docker-compose restart"
 alias containers="ctop -s mem"
