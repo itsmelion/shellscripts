@@ -1,3 +1,11 @@
+if [[ "`uname`" == "Linux" ]]; then
+  alias update="sudo apt update && sudo apt-get full-upgrade && sudo apt autoremove && npm cache verify && npm -g upgrade && npm cache verify"
+  alias docker-on="sudo systemctl start docker"
+  alias docker-off="sudo systemctl stop docker"
+elif [[ "`uname`" == "Darwin"* ]]; then
+  alias update="brew update && brew upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
+fi
+
 alias code="code-insiders"
 
 # Ultility to code remote stuff on editor by tunneling
