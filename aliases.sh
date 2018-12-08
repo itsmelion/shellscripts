@@ -3,7 +3,7 @@ if [[ "`uname`" == "Linux" ]]; then
   alias docker-on="sudo systemctl start docker"
   alias docker-off="sudo systemctl stop docker"
 elif [[ "`uname`" == "Darwin"* ]]; then
-  alias update="brew update && brew upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
+  alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
 fi
 
 alias code="code-insiders"
