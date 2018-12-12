@@ -4,6 +4,7 @@ if [[ "`uname`" == "Linux" ]]; then
   alias docker-off="sudo systemctl stop docker"
 elif [[ "`uname`" == "Darwin"* ]]; then
   alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
+  alias sketch="sudo date 0314223217 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
 fi
 
 alias code="code-insiders"
