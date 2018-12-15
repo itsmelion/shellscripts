@@ -8,7 +8,10 @@ elif [[ "`uname`" == "Darwin"* ]]; then
 fi
 
 alias code="code-insiders"
-
+alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.4 && nvm alias default node && nvm cache clear"
+alias zshconfig="code ~/.zshrc"
+alias zshconf="code ~/.zshrc"
+alias zshrc="code ~/.zshrc"
 # Ultility to code remote stuff on editor by tunneling
 alias alia="ssh -R 52698:localhost:52698 alia.ml"
 
@@ -20,3 +23,11 @@ alias log="docker-compose logs -f --tail 4"
 alias logtail="docker-compose logs -f --tail 50"
 alias build="docker-compose build --no-cache --pull"
 alias up="docker-compose up -d"
+
+sync-config() {
+  gist -u 79c6c87287160bdb161ebfa856243693 $HOME/.zshrc
+}
+
+download-config() {
+  curl -L https://gist.github.com/itsmelion/79c6c87287160bdb161ebfa856243693 -o $HOME/.zshrc
+}
