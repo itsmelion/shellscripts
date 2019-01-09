@@ -4,11 +4,11 @@ if [[ "`uname`" == "Linux" ]]; then
   alias docker-off="sudo systemctl stop docker"
 elif [[ "`uname`" == "Darwin"* ]]; then
   alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
-  alias sketch="sudo date 0314223217 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
+  alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
 fi
 
 alias code="code-insiders"
-alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.4 && nvm alias default node && nvm cache clear"
+alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.6 && nvm alias default node && nvm cache clear"
 alias zshconfig="code ~/.zshrc"
 alias zshconf="code ~/.zshrc"
 alias zshrc="code ~/.zshrc"
