@@ -8,7 +8,7 @@ elif [[ "`uname`" == "Darwin"* ]]; then
 fi
 
 alias code="code-insiders"
-alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.6 && nvm alias default node && nvm cache clear"
+alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.7 && nvm alias default node && nvm cache clear"
 alias zshconfig="code ~/.zshrc"
 alias zshconf="code ~/.zshrc"
 alias zshrc="code ~/.zshrc"

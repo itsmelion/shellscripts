@@ -14,3 +14,9 @@ commands() {
   echo "addSite 'param' = create nginx 'param'.conf and folder at 'SITES'"
   echo "setupServer 'param' = code 'param'.conf"
 }
+
+atServer(){
+  echo 'Welcome to ALIA server.. thread carefully'
+}
+
+atServer
