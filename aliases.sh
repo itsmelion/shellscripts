@@ -8,12 +8,12 @@ elif [[ "`uname`" == "Darwin"* ]]; then
 fi
 
 alias code="code-insiders"
-alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.7 && nvm alias default node && nvm cache clear"
+alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.8 && nvm alias default node && nvm cache clear"
 alias zshconfig="code ~/.zshrc"
 alias zshconf="code ~/.zshrc"
 alias zshrc="code ~/.zshrc"
 # Ultility to code remote stuff on editor by tunneling
-alias alia="ssh -R 52698:localhost:52698 alia.ml"
+alias alia="ssh -R 52698:localhost:52698 api.alia.ml"
 
 # Docker utils
 alias stop="docker-compose kill"
