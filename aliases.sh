@@ -7,6 +7,12 @@ elif [[ "`uname`" == "Darwin"* ]]; then
   alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
 fi
 
+if grep -q Microsoft /proc/version; then
+  alias docker="docker.exe"
+  alias docker-compose="docker-compose.exe"
+  alias crlf="find ./ -type f -exec dos2unix {} \;"
+fi
+
 alias code="code-insiders"
 alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.8 && nvm alias default node && nvm cache clear"
 alias zshconfig="code ~/.zshrc"
