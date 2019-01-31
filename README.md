@@ -4,7 +4,7 @@ clone at your `$HOME` and add each script file on your `~/.zshrc` file
 ex:
 ```sh
 if grep -q Microsoft /proc/version; then
-  echo "OK you are using WSL on Windows"
+  echo "Detected you are using WSL(Linux) on Windows, setting up your shell..."
   export WINDOWS=/mnt/c/Users/Lion
   source $WINDOWS/scripts/aliases.sh
 else
