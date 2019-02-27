@@ -27,7 +27,7 @@ alias restart="docker-compose restart"
 alias containers="ctop -s mem"
 alias log="docker-compose logs -f --tail 7"
 alias logtail="docker-compose logs -f --tail 100"
-alias build="docker-compose build --no-cache --pull --parallel"
+alias build="sudo docker-compose build --no-cache --pull --parallel"
 alias up="docker-compose up -d"
 
 sync-config() {
