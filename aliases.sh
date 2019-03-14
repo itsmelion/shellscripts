@@ -22,6 +22,8 @@ alias zshrc="code ~/.zshrc"
 alias alia="ssh -R 52698:localhost:52698 api.alia.ml"
 
 # Docker utils
+alias docker-start="sudo systemctl start docker"
+alias docker-stop="sudo systemctl stop docker"
 alias stop="docker-compose kill"
 alias restart="docker-compose restart"
 alias containers="ctop -s mem"
