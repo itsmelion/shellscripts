@@ -14,7 +14,6 @@ if grep -q Microsoft /proc/version; then
 fi
 
 alias code="code-insiders"
-alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.13 && nvm alias default node && nvm cache clear"
 alias zshconfig="code ~/.zshrc"
 alias zshconf="code ~/.zshrc"
 alias zshrc="code ~/.zshrc"
@@ -31,6 +30,13 @@ alias log="docker-compose logs -f --tail 7"
 alias logtail="docker-compose logs -f --tail 100"
 alias build="sudo docker-compose build --no-cache --pull"
 alias up="docker-compose up -d"
+
+nodeUpgrade() {
+  nvm install node --latest-npm --reinstall-packages-from=$(node -v)
+  nvm alias default node
+  nvm uninstall $(node -v)
+  nvm cache clear
+}
 
 sync-config() {
   gist -u 79c6c87287160bdb161ebfa856243693 $HOME/.zshrc
