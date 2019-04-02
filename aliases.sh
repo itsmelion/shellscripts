@@ -14,7 +14,7 @@ if grep -q Microsoft /proc/version; then
 fi
 
 alias code="code-insiders"
-alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.9 && nvm alias default node && nvm cache clear"
+alias nodeUpgrade="nvm install node --latest-npm --reinstall-packages-from=11.13 && nvm alias default node && nvm cache clear"
 alias zshconfig="code ~/.zshrc"
 alias zshconf="code ~/.zshrc"
 alias zshrc="code ~/.zshrc"
@@ -29,7 +29,7 @@ alias restart="docker-compose restart"
 alias containers="ctop -s mem"
 alias log="docker-compose logs -f --tail 7"
 alias logtail="docker-compose logs -f --tail 100"
-alias build="sudo docker-compose build --no-cache --pull --parallel"
+alias build="sudo docker-compose build --no-cache --pull"
 alias up="docker-compose up -d"
 
 sync-config() {
