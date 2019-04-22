@@ -13,6 +13,8 @@ if grep -q Microsoft /proc/version; then
   alias crlf="find ./ -type f -exec dos2unix {} \;"
 fi
 
+alias up="update"
+alias upgrade="update"
 alias code="code-insiders"
 alias zshconfig="code ~/.zshrc"
 alias zshconf="code ~/.zshrc"
@@ -32,9 +34,10 @@ alias build="sudo docker-compose build --no-cache --pull"
 alias up="docker-compose up -d"
 
 nodeUpgrade() {
-  nvm install node --latest-npm --reinstall-packages-from=$(node -v)
+  nodeVersion=$(node -v)
+  nvm install node --latest-npm --reinstall-packages-from=$(nodeVersion)
   nvm alias default node
-  nvm uninstall $(node -v)
+  nvm uninstall $(nodeVersion)
   nvm cache clear
 }
 
