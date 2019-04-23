@@ -34,10 +34,10 @@ alias build="sudo docker-compose build --no-cache --pull"
 alias up="docker-compose up -d"
 
 nodeUpgrade() {
-  nodeVersion=$(node -v)
-  nvm install node --latest-npm --reinstall-packages-from=$(nodeVersion)
+  local nodeVersion=$(node -v)
+  nvm install node --latest-npm --reinstall-packages-from=$nodeVersion
   nvm alias default node
-  nvm uninstall $(nodeVersion)
+  nvm uninstall $nodeVersion
   nvm cache clear
 }
 
