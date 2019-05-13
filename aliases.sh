@@ -1,5 +1,5 @@
 if [[ "`uname`" == "Linux" ]]; then
-  alias update="sudo apt update && sudo apt-get full-upgrade && sudo apt autoremove && npm cache verify && npm -g upgrade && npm cache verify"
+  alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm cache verify && npm -g upgrade && npm cache verify"
   alias docker-on="sudo systemctl start docker"
   alias docker-off="sudo systemctl stop docker"
 elif [[ "`uname`" == "Darwin"* ]]; then
