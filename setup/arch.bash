@@ -1,9 +1,12 @@
-echo "»  Updating system"
+printf "»  Updating system"
 sudo pacman -Syu
 
-echo "»  installing core packages..."
-sudo pacman -Sy curl wget openssh git nano
+printf "»  installing core packages..."
+sudo pacman -Sy curl wget openssh git base-devel yajl yaourt nano
 
-echo "»  OK"
-echo "»  Setting things up"
+printf "»  Setting things up"
 source common.sh
+
+pacman -S otf-fira-code guake code nodejs npm xdg-mime
+
+yaourt -S gitkraken insomnia spotify
