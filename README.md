@@ -13,4 +13,8 @@ else
 fi
 ```
 ___
-It works with ZSH + OhMyZsh
+It works best with ZSH + OhMyZsh
+
+## OS Setup script
+*IMPORTANT:* Make sure that you have a GIT_TOKEN key in your shell, else get one, and change the repo URL.
+RUN: `setup/OS.bash`
