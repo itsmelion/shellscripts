@@ -13,6 +13,7 @@ choco install -y curl
 choco install -y wget
 choco install -y yarn
 choco install -y vscode
+choco install vscode-insiders
 choco install -y k-litecodecpackfull
 choco install -y spotify
 choco install -y googledrive
