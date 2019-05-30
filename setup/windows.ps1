@@ -5,6 +5,7 @@ choco install -y nodejs
 choco install -y docker-desktop
 choco install -y googlechrome
 choco install -y googlechrome.canary
+choco install -y powershell-core
 choco install -y vlc
 choco install -y git
 choco install -y openssh
@@ -13,7 +14,7 @@ choco install -y curl
 choco install -y wget
 choco install -y yarn
 choco install -y vscode
-choco install vscode-insiders
+choco install -y vscode-insiders
 choco install -y k-litecodecpackfull
 choco install -y spotify
 choco install -y googledrive
