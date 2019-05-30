@@ -1,10 +1,18 @@
-if [[ "`uname`" == "Linux" ]]; then
+if [[ "`source /etc/os-release && echo "$NAME"`" == "Ubuntu" ]]; then
   alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm cache verify && npm -g upgrade && npm cache verify"
   alias docker-on="sudo systemctl start docker"
   alias docker-off="sudo systemctl stop docker"
 elif [[ "`uname`" == "Darwin"* ]]; then
+if [[ "`source /etc/os-release && echo "$NAME"`" == "Arch"* ]]; then
+  alias update="sudo pacman -Syu"
+elif [[ "`uname`" == "Darwin"* ]]; then
   alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
   alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
+fi
+
+if [[ "`uname`" == "Linux" ]]; then
+  alias docker-on="sudo systemctl start docker"
+  alias docker-off="sudo systemctl stop docker"
 fi
 
 if grep -q Microsoft /proc/version; then
@@ -16,8 +24,6 @@ fi
 alias up="update"
 alias upgrade="update"
 alias code="code-insiders"
-alias zshconfig="code ~/.zshrc"
-alias zshconf="code ~/.zshrc"
 alias zshrc="code ~/.zshrc"
 # Ultility to code remote stuff on editor by tunneling
 alias alia="ssh -R 52698:localhost:52698 api.alia.ml"
@@ -39,12 +45,4 @@ nodeUpgrade() {
   nvm alias default node
   nvm uninstall $nodeVersion
   nvm cache clear
-}
-
-sync-config() {
-  gist -u 79c6c87287160bdb161ebfa856243693 $HOME/.zshrc
-}
-
-download-config() {
-  curl -L https://gist.github.com/itsmelion/79c6c87287160bdb161ebfa856243693 -o $HOME/.zshrc
 }

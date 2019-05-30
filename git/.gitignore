@@ -1,0 +1,18 @@
+# VIM
+*~
+.*.swp
+
+# OS hidden Files
+.DS_Store
+Thumbs.ds~
+
+# Modules
+node_modules
+
+# Temp
+.sass-cache
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log

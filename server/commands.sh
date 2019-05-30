@@ -1,4 +1,4 @@
-setupServer() {
+editServer() {
   sudo code $NGINX/sites-available/"$1".conf
 }
 
@@ -11,12 +11,12 @@ addSite() {
 
 commands() {
   echo "nginx-restart"
-  echo "addSite 'param' = create nginx 'param'.conf and folder at 'SITES'"
-  echo "setupServer 'param' = code 'param'.conf"
+  echo "addSite 'param' = create nginx 'param'.conf and folder at 'SITES ($SITES/param)'"
+  echo "editServer 'param' = code 'param'.conf"
 }
 
 atServer(){
-  echo 'Welcome to ALIA server.. thread carefully'
+  printf 'Welcome to ALIA server.. thread carefully'
 }
 
 atServer

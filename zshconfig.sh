@@ -48,7 +48,7 @@ export DISABLE_UPDATE_PROMPT=true
 export DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/id_rsa"
+export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
 export LANG=en_US.UTF-8
 
 # Uncomment the following line if you want to change the command execution time
@@ -68,12 +68,6 @@ export NVM_LAZY_LOAD=true
 export NVM_DIR="$HOME/.nvm"
 
 source $ZSH/oh-my-zsh.sh
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git node zsh-nvm)
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
