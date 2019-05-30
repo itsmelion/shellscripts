@@ -1,5 +1,5 @@
 sshSetup () {
-  printf "»  SSH setup\n"
+  printf "\n»  SSH setup\n"
 
   if [ -d "$HOME/.ssh" ]; then
     printf "You already have a .ssh folder\n"
@@ -16,24 +16,18 @@ sshSetup () {
   chmod 644 id_rsa.pub
   chmod 600 id_rsa
   cd $HOME
-  printf "\n»  SSH setup Complete\n\n"
+  printf "\n»  SSH setup Complete\n"
 }
-sshSetup
 
 # Git Setup
 gitSetup () {
-  cp ../git/.gitconfig $HOME/
+  cp ../git/.gitconfig $HOME
   git config --global user.name "Christhopher Lion"
   git config --global user.email christhopherleao@icloud.com
   git config --global core.editor code
-  cp ../git/.gitignore $HOME/
+  cp ../git/.gitignore $HOME
   git config --global core.excludesfile $HOME/.gitignore
 }
-gitSetup
-
-printf "»  Installing nice apps.."
-# Node NVM
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 # Docker
 installDocker () {
@@ -45,6 +39,18 @@ installDocker () {
   sudo systemctl disable docker
 }
 
+# Oh My ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+cat ../.zshconfig >> $HOME/.zshrc
+
+sshSetup
+gitSetup
+
+printf "\n\n»  Installing nice apps..\n"
+
+# Node NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
 while true; do
     read -p "Do you wish to install Docker CE? (yes/no)" local yn
     case $yn in
@@ -54,8 +60,11 @@ while true; do
     esac
 done
 
-# Oh My ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cat ../.zshconfig >> $HOME/.zshrc
-
 xdg-mime default code.desktop text/plain
+
+cp ../.editorconfig $HOME
+
+if [ -d "$HOME/sites" ]; then
+  return;
+else mkdir $HOME/sites;
+fi

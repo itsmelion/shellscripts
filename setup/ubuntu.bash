@@ -7,7 +7,14 @@ source common.sh
 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt update
-sudo apt install -y build-essential curl wget fonts-firacode apt-transport-https nodejs
+sudo apt install -y \
+  build-essential \
+  curl \
+  wget \
+  fonts-firacode \
+  apt-transport-https \
+  nodejs \
+  zsh
 
 installExtras () {
   # Spotify Keys
@@ -20,10 +27,8 @@ installExtras () {
   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
   # Insomnia
-  echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
-    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
-  wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
-    | sudo apt-key add -
+  echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+  wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc | sudo apt-key add -
 
   # GitKraken
   wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
