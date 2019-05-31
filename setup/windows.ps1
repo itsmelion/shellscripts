@@ -1,5 +1,5 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
+refreshenv
 choco install -y chocolatey-core.extension
 choco install -y nodejs
 choco install -y docker-desktop
@@ -22,6 +22,7 @@ choco install -y gitkraken
 choco install -y insomnia-rest-api-client
 choco install -y firacode
 
+refreshenv
 cp ..\git\.gitconfig $HOME
 git config --global user.name "Christhopher Lion"
 git config --global user.email christhopherleao@icloud.com

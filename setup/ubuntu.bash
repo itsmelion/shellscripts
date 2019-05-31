@@ -1,9 +1,11 @@
+#!/bin/bash
+
 printf "»  Updating system..."
 sudo apt update
 sudo apt full-upgrade -y
 
 printf "»  Setting things up"
-source common.sh
+source ./common.sh
 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt update
