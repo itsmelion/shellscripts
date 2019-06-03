@@ -18,7 +18,7 @@ fi
 if grep -q Microsoft /proc/version; then
   alias docker="docker.exe"
   alias docker-compose="docker-compose.exe"
-  alias crlf="find ./ -type f -exec dos2unix {} \;"
+  alias crlf="find ./ ! -path "./node_modules/*" -type f -exec dos2unix {} \;"
 fi
 
 alias up="update"

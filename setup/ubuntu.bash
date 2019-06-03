@@ -19,6 +19,16 @@ sudo apt install -y \
   zsh
 
 installExtras () {
+  local yn
+  while true; do
+    read -p "Do you wish to install apps and extras? (Y/n)" yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) return;;
+        * ) echo "Please answer Y or n.";;
+    esac
+  done
+
   # Spotify Keys
   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
   echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -46,13 +56,6 @@ installExtras () {
   sudo update-alternatives --set editor /usr/bin/code
 }
 
-while true; do
-    read -p "Do you wish to install apps and extras? (yes/no)" local yn
-    case $yn in
-        [Yy]* ) installExtras; break;;
-        [Nn]* ) return;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+installExtras
 
 sudo apt autoremove -y
