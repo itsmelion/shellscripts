@@ -1,15 +1,22 @@
 sshSetup () {
   printf "\n»  SSH setup\n"
+  local yn GIT_TOKEN
 
   if [ -d "$HOME/.ssh" ]; then
     printf "You already have a .ssh folder\n"
-    return;
+    while true; do
+      read -p "shall we overwrite it? (Y/n) " yn
+      case $yn in
+          [Yy]* ) printf "\n... overwriting: id_rsa, id_rsa.pub, known_hosts\n"; break;;
+          [Nn]* ) return;;
+          * ) printf "Please answer Y or n.\n";;
+      esac
+    done
+  else mkdir -m 700 $HOME/.ssh;
   fi
 
-  mkdir -m 700 $HOME/.ssh
-
-  read -p "Enter your git access token: " GIT_TOKEN
   cd $HOME/.ssh
+  read -p "\nEnter your git access token: " GIT_TOKEN
   curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/id_rsa
   curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/id_rsa.pub
   curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/known_hosts
@@ -38,6 +45,17 @@ installDocker () {
   sudo chmod g+rwx "$HOME/.docker" -R
   sudo systemctl disable docker
 }
+promptDocker () {
+  local yn
+  while true; do
+    read -p "Do you wish to install Docker CE? (Y/n)" yn
+    case $yn in
+        [Yy]* ) installDocker; break;;
+        [Nn]* ) return;;
+        * ) echo "Please answer Y or n.";;
+    esac
+  done
+}
 
 # Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -51,14 +69,7 @@ printf "\n\n»  Installing nice apps..\n"
 # Node NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
-while true; do
-    read -p "Do you wish to install Docker CE? (yes/no)" local yn
-    case $yn in
-        [Yy]* ) installDocker; break;;
-        [Nn]* ) return;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+promptDocker
 
 xdg-mime default code.desktop text/plain
 
