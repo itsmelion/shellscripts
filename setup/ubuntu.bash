@@ -1,10 +1,10 @@
 #!/bin/bash
 
-printf "»  Updating system..."
+printf "\n\n»  Updating system...\n"
 sudo apt update
 sudo apt full-upgrade -y
 
-printf "»  Setting things up"
+printf "\n\n»  Setting things up\n"
 source ./common.sh
 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -21,11 +21,11 @@ sudo apt install -y \
 installExtras () {
   local yn
   while true; do
-    read -p "Do you wish to install apps and extras? (Y/n)" yn
+    read -p "\nDo you wish to install apps and extras? (Y/n) " yn
     case $yn in
         [Yy]* ) break;;
         [Nn]* ) return;;
-        * ) echo "Please answer Y or n.";;
+        * ) echo "\nPlease answer Y or n.";;
     esac
   done
 

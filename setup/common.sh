@@ -1,3 +1,5 @@
+#!/bin/sh
+
 sshSetup () {
   printf "\n»  SSH setup\n"
   local yn GIT_TOKEN
@@ -57,9 +59,11 @@ promptDocker () {
   done
 }
 
+cd "$(dirname "$0")"
+
 # Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cat ../.zshconfig >> $HOME/.zshrc
+cat ../zshconfig.sh >> $HOME/.zshrc
 
 sshSetup
 gitSetup
