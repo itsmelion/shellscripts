@@ -38,6 +38,7 @@ alias log="docker-compose logs -f --tail 7"
 alias logtail="docker-compose logs -f --tail 100"
 alias build="sudo docker-compose build --no-cache --pull"
 alias up="docker-compose up -d"
+alias update-sub="git submodule update --init --recursive"
 
 nodeUpgrade() {
   local nodeVersion=$(node -v)
@@ -45,4 +46,9 @@ nodeUpgrade() {
   nvm alias default node
   nvm uninstall $nodeVersion
   nvm cache clear
+}
+
+clone-sub() {
+  git clone --recursive $1
+  git submodule foreach --recursive "git checkout master"
 }
