@@ -22,6 +22,8 @@ choco install -y googledrive
 choco install -y gitkraken
 choco install -y insomnia-rest-api-client
 choco install -y firacode
+choco install -y robo3t
+choco install -y docker-kitematic
 
 refreshenv
 cp ..\git\.gitconfig $HOME
