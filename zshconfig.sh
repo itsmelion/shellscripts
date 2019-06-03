@@ -56,6 +56,14 @@ export LANG=en_US.UTF-8
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
+if grep -q Microsoft /proc/version; then
+  export WINDOWS=/mnt/c/Users/Lion
+  export W=/mnt/c/Users/Lion
+else
+  source $HOME/scripts/zshconfig.sh
+  source $HOME/scripts/aliases.sh
+fi
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='code'
