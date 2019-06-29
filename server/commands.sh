@@ -15,7 +15,7 @@ commands() {
   echo "editServer 'param' = code 'param'.conf"
 }
 
-atServer(){
+atServer() {
   printf 'Welcome to ALIA server.. thread carefully'
 }
 

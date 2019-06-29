@@ -6,6 +6,7 @@ choco install -y docker-desktop
 choco install -y googlechrome
 choco install -y googlechrome.canary
 choco install -y powershell-core
+choco install -y powershell-preview
 choco install -y hyper
 choco install -y git
 choco install -y openssh
@@ -24,6 +25,8 @@ choco install -y insomnia-rest-api-client
 choco install -y firacode
 choco install -y robo3t
 choco install -y docker-kitematic
+choco install -y whatsapp
+choco install -y slack
 
 refreshenv
 cp ..\git\.gitconfig $HOME
