@@ -12,4 +12,4 @@ source ./common.sh
 pacman -S otf-fira-code guake code nodejs npm xdg-mime zsh
 
 printf "»  About to install (AUR) gitkraken insomnia spotify"
-yaourt -S gitkraken insomnia spotify
+yay gitkraken insomnia spotify
