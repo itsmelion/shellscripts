@@ -4,7 +4,7 @@ printf "»  Updating system"
 sudo pacman -Syu
 
 printf "»  installing core packages..."
-sudo pacman -Sy curl wget openssh git base-devel yajl yaourt nano
+sudo pacman -Sy curl wget openssh git base-devel yajl yay nano
 
 printf "»  Setting things up"
 source ./common.sh
