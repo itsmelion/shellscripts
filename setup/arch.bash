@@ -9,7 +9,11 @@ sudo pacman -Sy curl wget openssh git base-devel yajl yay nano
 printf "»  Setting things up"
 source ./common.sh
 
-pacman -S otf-fira-code guake code nodejs npm xdg-mime zsh
+pacman -S otf-fira-code chrome-gnome-shell guake nodejs npm yarn zsh
 
 printf "»  About to install (AUR) gitkraken insomnia spotify"
-yay gitkraken insomnia spotify
+yay visual-studio-code-bin
+yay visual-studio-code-insiders-bin
+yay gitkraken
+yay insomnia
+yay spotify

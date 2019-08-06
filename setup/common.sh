@@ -78,6 +78,7 @@ promptDocker
 xdg-mime default code.desktop text/plain
 
 cp ../.editorconfig $HOME
+cp ../zshconfig.sh $HOME/.zshrc
 
 if [ -d "$HOME/sites" ]; then
   return;
