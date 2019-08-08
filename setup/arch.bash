@@ -4,7 +4,7 @@ printf "»  Updating system"
 sudo pacman -Syu
 
 printf "»  installing core packages..."
-sudo pacman -Sy curl wget openssh git base-devel yajl yay nano
+sudo pacman -Sy curl wget openssh git base-devel yajl yay nano docker
 
 printf "»  Setting things up"
 source ./common.sh
@@ -17,3 +17,4 @@ yay visual-studio-code-insiders-bin
 yay gitkraken
 yay insomnia
 yay spotify
+yay ctop

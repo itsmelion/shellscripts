@@ -38,27 +38,6 @@ gitSetup () {
   git config --global core.excludesfile $HOME/.gitignore
 }
 
-# Docker
-installDocker () {
-  curl -fsSL https://get.docker.com -o get-docker.sh
-  sudo sh get-docker.sh
-  sudo groupadd docker
-  sudo usermod -aG docker $USER
-  sudo chmod g+rwx "$HOME/.docker" -R
-  sudo systemctl disable docker
-}
-promptDocker () {
-  local yn
-  while true; do
-    read -p "Do you wish to install Docker CE? (Y/n)" yn
-    case $yn in
-        [Yy]* ) installDocker; break;;
-        [Nn]* ) return;;
-        * ) echo "Please answer Y or n.";;
-    esac
-  done
-}
-
 cd "$(dirname "$0")"
 
 # Oh My ZSH
@@ -72,8 +51,6 @@ printf "\n\n»  Installing nice apps..\n"
 
 # Node NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-
-promptDocker
 
 xdg-mime default code.desktop text/plain
 
