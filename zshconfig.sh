@@ -57,6 +57,7 @@ export LANG=en_US.UTF-8
 # HIST_STAMPS="mm/dd/yyyy"
 
 export WINDOWS=/mnt/c/Users/Lion
+export NPM_TOKEN=49974FB0-AFBA-42DC-A423-4A17EA010493
 alias W="$WINDOWS"
 
 source $HOME/scripts/aliases.sh
