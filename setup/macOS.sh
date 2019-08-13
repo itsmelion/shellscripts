@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # xcode command line - Select: "Get xcode" and go get a coffee (preferably far from your desk :)
 xcode-select --install
