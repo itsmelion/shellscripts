@@ -50,6 +50,7 @@ export DISABLE_UNTRACKED_FILES_DIRTY="true"
 # ssh
 export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
 export LANG=en_US.UTF-8
+export GPG_TTY=$(tty)
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -60,7 +61,7 @@ export WINDOWS=/mnt/c/Users/Lion
 export NPM_TOKEN=49974FB0-AFBA-42DC-A423-4A17EA010493
 alias W="$WINDOWS"
 
-source $HOME/scripts/aliases.sh
+source $HOME/repo/shellscripts/aliases.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
