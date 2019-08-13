@@ -12,12 +12,12 @@ cloneSub() {
 }
 
 if [[ "`uname`" == "Darwin"* ]]; then
-  alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm cache verify && npm -g upgrade && npm cache verify"
+  alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
+  alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Arch"* ]]; then
   alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm"
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
-  alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
-  alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
+  alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm cache verify && npm -g upgrade && npm cache verify"
 fi
 
 alias crlf="find ./ ! -path \"./node_modules/*\" -type f -exec dos2unix {} \;"
