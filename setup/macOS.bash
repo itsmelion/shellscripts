@@ -7,8 +7,6 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install zsh
 brew install zsh-completions
-brew tap caskroom/cask
-brew tap caskroom/versions
 brew tap homebrew/dupes
 brew tap homebrew/versions
 brew update
@@ -20,8 +18,9 @@ source ./common.sh
 # Development Tools
 brew cask install iterm2-beta
 brew install node
+brew install gnupg
 brew install watchman
-brew install docker
+brew install ctop
 brew cask install visual-studio-code-insiders
 brew cask install insomnia
 brew cask install gitkraken
@@ -44,6 +43,6 @@ curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
 
 echo 'fine.. now install Docker, Photoshop, WhatsApp and Trello Spark.. then you are ready'
-echo optional JDK8 (for native) 
-echo brew tap AdoptOpenJDK/openjdk
-echo brew cask install adoptopenjdk8
+echo 'optional JDK8 (for native)'
+echo 'brew tap AdoptOpenJDK/openjdk'
+echo 'brew cask install adoptopenjdk8'
