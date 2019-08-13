@@ -1,17 +1,17 @@
 #!/bin/sh
 
 sshSetup () {
-  printf "\n»  SSH setup\n"
+  echo "\n»  SSH setup\n"
   local yn GIT_TOKEN
 
   if [ -d "$HOME/.ssh" ]; then
-    printf "You already have a .ssh folder\n"
+    echo "You already have a .ssh folder\n"
     while true; do
       read -p "shall we overwrite it? (Y/n) " yn
       case $yn in
-          [Yy]* ) printf "\n... overwriting: id_rsa, id_rsa.pub, known_hosts\n"; break;;
+          [Yy]* ) echo "\n... overwriting: id_rsa, id_rsa.pub, known_hosts\n"; break;;
           [Nn]* ) return;;
-          * ) printf "Please answer Y or n.\n";;
+          * ) echo "Please answer Y or n.\n";;
       esac
     done
   else mkdir -m 700 $HOME/.ssh;
@@ -25,7 +25,7 @@ sshSetup () {
   chmod 644 id_rsa.pub
   chmod 600 id_rsa
   cd $HOME
-  printf "\n»  SSH setup Complete\n"
+  echo "\n»  SSH setup Complete\n"
 }
 
 # Git Setup
@@ -47,7 +47,7 @@ cat ../zshconfig.sh >> $HOME/.zshrc
 sshSetup
 gitSetup
 
-printf "\n\n»  Installing nice apps..\n"
+echo "\n\n»  Installing nice apps..\n"
 
 # Node NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
@@ -57,7 +57,7 @@ xdg-mime default code.desktop text/plain
 cp ../.editorconfig $HOME
 cp ../zshconfig.sh $HOME/.zshrc
 
-if [ -d "$HOME/sites" ]; then
+if [ -d "$HOME/repo" ]; then
   return;
-else mkdir $HOME/sites;
+else mkdir $HOME/repo;
 fi

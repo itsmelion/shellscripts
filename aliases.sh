@@ -11,23 +11,13 @@ cloneSub() {
   git submodule foreach --recursive "git checkout master"
 }
 
-if [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
+if [[ "`uname`" == "Darwin"* ]]; then
   alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm cache verify && npm -g upgrade && npm cache verify"
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Arch"* ]]; then
   alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm"
-elif [[ "`uname`" == "Darwin"* ]]; then
+elif [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
   alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
   alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
-fi
-
-# if [[ "`uname`" == "Linux" ]]; then
-#   alias docker-on="sudo systemctl start docker"
-#   alias docker-off="sudo systemctl stop docker"
-# fi
-
-if grep -q Microsoft /proc/version; then
-  alias docker="docker.exe"
-  alias docker-compose="docker-compose.exe"
 fi
 
 alias crlf="find ./ ! -path \"./node_modules/*\" -type f -exec dos2unix {} \;"
