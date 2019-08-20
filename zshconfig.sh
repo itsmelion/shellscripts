@@ -61,7 +61,7 @@ export WINDOWS=/mnt/c/Users/Lion
 export NPM_TOKEN=49974FB0-AFBA-42DC-A423-4A17EA010493
 alias W="$WINDOWS"
 
-source $HOME/repo/shellscripts/aliases.sh
+source $HOME/shellscripts/aliases.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -77,7 +77,11 @@ export NVM_DIR="$HOME/.nvm"
 source $ZSH/oh-my-zsh.sh
 
 # Android SDK
-export ANDROID_HOME=$HOME/Android/Sdk
+if [[ "`uname`" == "Darwin"* ]]; then
+  export ANDROID_HOME=$HOME/Library/Android/sdk
+else
+  export ANDROID_HOME=$HOME/Android/Sdk
+fi
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
