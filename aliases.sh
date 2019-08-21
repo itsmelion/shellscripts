@@ -14,7 +14,7 @@ cloneSub() {
 if [[ "`uname`" == "Darwin"* ]]; then
   alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm cache verify && npm -g upgrade && npm cache verify"
   alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
-  source ./iterm2_shell_integration.zsh
+  source $HOME/shellscripts/iterm_shell_integration.zsh
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Arch"* ]]; then
   alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm"
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
