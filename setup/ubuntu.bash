@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 printf "\n\n»  Updating system...\n"
 sudo apt update
