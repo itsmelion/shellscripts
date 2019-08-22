@@ -19,5 +19,4 @@ yay insomnia
 yay spotify
 yay ctop
 yay opensiddur-hebrew-fonts
-yay culmus
 yay ttf-mac-fonts
