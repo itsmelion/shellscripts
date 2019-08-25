@@ -1,3 +1,8 @@
+help() {
+  echo "cloneSub <git-repo>      ---> clones repositories with submodules"
+  echo "update-sub               ---> updates child submodules"
+}
+
 nodeUpgrade() {
   local nodeVersion=$(node -v)
   nvm install node --latest-npm --reinstall-packages-from=$nodeVersion
@@ -21,7 +26,6 @@ elif [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
   alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm cache verify && npm -g upgrade && npm cache verify"
 fi
 
-alias crlf="find ./ ! -path \"./node_modules/*\" -type f -exec dos2unix {} \;"
 alias up="update"
 alias upgrade="update"
 alias code="code-insiders"
@@ -43,3 +47,4 @@ alias docker-stop="sudo systemctl stop docker"
 alias docker-off="sudo systemctl stop docker"
 
 alias update-sub="git submodule update --init --recursive"
+alias crlf="find ./ ! -path \"./node_modules/*\" -type f -exec dos2unix {} \;"
