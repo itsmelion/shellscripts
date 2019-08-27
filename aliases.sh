@@ -12,7 +12,7 @@ nodeUpgrade() {
 }
 
 cloneSub() {
-  git clone --recursive $1
+  git clone --recursive $1 $2
   cd $2
   git submodule foreach --recursive "git checkout master"
 }
