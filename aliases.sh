@@ -1,6 +1,6 @@
 help() {
-  echo "cloneSub <git-repo>      ---> clones repositories with submodules"
-  echo "update-sub               ---> updates child submodules"
+  echo "cloneSub <git-repo> <folder-name>  ---> clones repositories with submodules"
+  echo "update-sub                         ---> updates child submodules"
 }
 
 nodeUpgrade() {
@@ -13,6 +13,7 @@ nodeUpgrade() {
 
 cloneSub() {
   git clone --recursive $1
+  cd $2
   git submodule foreach --recursive "git checkout master"
 }
 
