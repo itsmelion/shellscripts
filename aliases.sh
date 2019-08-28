@@ -1,6 +1,8 @@
 help() {
-  echo "cloneSub <git-repo> <folder-name>  ---> clones repositories with submodules"
-  echo "update-sub                         ---> updates child submodules"
+  echo "cloneSub <git-repo> <folder-name>   ---> clones repositories with submodules"
+  echo "update-sub                          ---> updates child submodules"
+  echo "find . -name '*.js' -type f -delete ---> find and deletes files recursively"
+  echo "git rm -r --cached .                ---> removes git cache (ignorant files)"
 }
 
 nodeUpgrade() {
@@ -38,7 +40,7 @@ alias alia="ssh -R 52698:localhost:52698 api.alia.ml"
 alias stop="docker-compose kill"
 alias restart="docker-compose restart"
 alias containers="ctop -s mem"
-alias log="docker-compose logs -f --tail 7"
+alias log="docker-compose logs -f --tail 20"
 alias logtail="docker-compose logs -f --tail 100"
 alias build="sudo docker-compose build --no-cache --pull"
 alias rebuild="sudo docker-compose build --pull"
