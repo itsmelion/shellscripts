@@ -1,6 +1,7 @@
 help() {
-  echo "cloneSub <git-repo> <folder-name>  ---> clones repositories with submodules"
-  echo "update-sub                         ---> updates child submodules"
+  echo "cloneSub <git-repo> <folder-name>   ---> clones repositories with submodules"
+  echo "update-sub                          ---> updates child submodules"
+  echo "find . -name '*.js' -type f -delete ---> find and deletes files recursively"
 }
 
 nodeUpgrade() {
