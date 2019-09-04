@@ -8,6 +8,7 @@ printf "\n\n»  Setting things up\n"
 source ./common.sh
 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
 sudo apt update
 sudo apt install -y \
   build-essential \
@@ -16,6 +17,7 @@ sudo apt install -y \
   fonts-firacode \
   apt-transport-https \
   nodejs \
+  gnupg \
   zsh
 
 installExtras () {
@@ -80,5 +82,7 @@ promptDocker () {
 
 promptDocker
 installExtras
+
+source ./post_install.common.sh
 
 sudo apt autoremove -y

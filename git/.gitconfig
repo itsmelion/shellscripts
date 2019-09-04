@@ -1,3 +1,16 @@
 [user]
 	name = Christhopher Lion
 	email = christhopherleao@icloud.com
+  signingKey = 9216BB46E32C49B72F52F6D1980396855D74482B
+
+[core]
+	editor = code-insiders
+
+[commit]
+	gpgsign = true
+
+[tag]
+	forceSignAnnotated = true
+
+[gpg]
+	program = gpg

@@ -45,6 +45,8 @@ npm i -g eslint npm@latest
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
 
+source ./post_install.common.sh
+
 echo 'fine.. now install Docker, Photoshop, WhatsApp and Trello Spark.. then you are ready'
 echo 'optional JDK8 (for native)'
 echo 'brew tap AdoptOpenJDK/openjdk'
