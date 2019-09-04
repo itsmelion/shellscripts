@@ -10,11 +10,11 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install zsh
 brew install zsh-completions
-brew tap homebrew/dupes
-brew tap homebrew/versions
+brew install wget
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
 brew update
 brew upgrade
-brew install wget
 
 source ./common.sh
 
@@ -24,6 +24,7 @@ brew install node
 brew install gnupg
 brew install watchman
 brew install ctop
+brew cask install docker-edge
 brew cask install visual-studio-code-insiders
 brew cask install insomnia
 brew cask install gitkraken
@@ -34,13 +35,12 @@ brew cask install google-chrome-canary
 brew cask install firefox-developer-edition
 brew cask install safari-technology-preview
 
-brew cask install slack
+brew cask install slack-beta
 brew cask install skype-preview
 brew cask install spotify
-npm i -g eslint react-native-cli
-
-brew tap homebrew/cask-fonts
 brew cask install font-fira-code
+
+npm i -g eslint npm@latest
 
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
