@@ -49,5 +49,4 @@ source ./post_install.common.sh
 
 echo 'fine.. now install Docker, Photoshop, WhatsApp and Trello Spark.. then you are ready'
 echo 'optional JDK8 (for native)'
-echo 'brew tap AdoptOpenJDK/openjdk'
 echo 'brew cask install adoptopenjdk8'
