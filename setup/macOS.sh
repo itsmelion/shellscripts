@@ -47,6 +47,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
 
 source ./post_install.common.sh
 
+gem update --user-install
+gem install --user-install cocoapods --pre
+
 echo 'fine.. now install Docker, Photoshop, WhatsApp and Trello Spark.. then you are ready'
 echo 'optional JDK8 (for native)'
 echo 'brew cask install adoptopenjdk8'
