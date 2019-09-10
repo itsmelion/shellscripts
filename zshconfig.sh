@@ -65,10 +65,12 @@ source $HOME/shellscripts/aliases.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR="code"
+  export EDITOR="nano"
 else
   export EDITOR="code"
 fi
+
+export REACT_EDITOR="code"
 
 # NVM
 export NVM_LAZY_LOAD=true
