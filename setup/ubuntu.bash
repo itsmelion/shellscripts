@@ -7,7 +7,6 @@ sudo apt full-upgrade -y
 printf "\n\n»  Setting things up\n"
 source ./common.sh
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 sudo apt update
 sudo apt install -y \
@@ -16,9 +15,16 @@ sudo apt install -y \
   wget \
   fonts-firacode \
   apt-transport-https \
-  nodejs \
   gnupg \
   zsh
+
+# Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# CTOP
+sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.2/ctop-0.7.2-linux-amd64 -O /usr/local/bin/ctop
+sudo chmod +x /usr/local/bin/ctop
 
 installExtras () {
   local yn
@@ -64,6 +70,10 @@ installDocker () {
   sudo sh get-docker.sh
   sudo groupadd docker
   sudo usermod -aG docker $USER
+  if [ -d "$HOME/.docker" ]; then
+    return;
+  else mkdir $HOME/.docker;
+  fi
   sudo chmod g+rwx "$HOME/.docker" -R
   sudo systemctl disable docker
 }

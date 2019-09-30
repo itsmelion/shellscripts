@@ -56,8 +56,3 @@ xdg-mime default code.desktop text/plain
 
 cp ../.editorconfig $HOME
 cp ../zshconfig.sh $HOME/.zshrc
-
-if [ -d "$HOME/repo" ]; then
-  return;
-else mkdir $HOME/repo;
-fi

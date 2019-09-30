@@ -49,7 +49,9 @@ export DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # ssh
 export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
-export LANG=en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 export GPG_TTY=$(tty)
 
 # Uncomment the following line if you want to change the command execution time
