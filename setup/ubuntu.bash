@@ -18,18 +18,28 @@ sudo apt install -y \
   gnupg \
   zsh
 
-# Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
 # CTOP
+echo "\n📦=> Ctop:\n"
 sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.2/ctop-0.7.2-linux-amd64 -O /usr/local/bin/ctop
 sudo chmod +x /usr/local/bin/ctop
 
+serverOnly() {
+  echo "Installing utils for the server"
+
+  # Install RMate (to edit files remotely on VSCode or else)
+  echo "\n📦=> r-mate:\n"
+  sudo wget -O /usr/local/bin/rmate https://raw.github.com/aurora/rmate/master/rmate
+  sudo chmod a+x /usr/local/bin/rmate
+}
+
+
+# Usefull Desktop apps
 installExtras () {
   local yn
+  echo "\nDo you wish to install some apps? (Desktop Only)\n"
+  echo "\n- Insomnia | GitKraken | VSCode | Spotify .. \n"
   while true; do
-    read -p "\nDo you wish to install apps and extras? (Y/n) " yn
+    read -p "\n (Y/n) " yn
     case $yn in
         [Yy]* ) break;;
         [Nn]* ) return;;
@@ -76,6 +86,11 @@ installDocker () {
   fi
   sudo chmod g+rwx "$HOME/.docker" -R
   sudo systemctl disable docker
+
+  # Docker Compose
+  echo "\n📦=> Docker-Compose v1.24.1:\n"
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
 }
 
 promptDocker () {
@@ -96,3 +111,13 @@ installExtras
 source ./post_install.common.sh
 
 sudo apt autoremove -y
+echo "#######################"
+echo "###    FINISHED!    ###"
+echo "#######################"
+
+echo "\nif Desktop you may want to disable docker from boot: \n"
+echo "    sudo systemctl disable docker"
+
+docker-compose -v
+echo "\nyou may check for update docker-compose script: \n"
+echo "    https://github.com/docker/compose/releases"

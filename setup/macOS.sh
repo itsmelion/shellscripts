@@ -24,6 +24,9 @@ brew install node
 brew install gnupg
 brew install watchman
 brew install ctop
+brew install rmate
+# brew install cocoapods
+brew install cocoapods --devel
 brew cask install docker-edge
 brew cask install visual-studio-code-insiders
 brew cask install insomnia
