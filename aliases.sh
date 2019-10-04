@@ -5,7 +5,7 @@ help() {
   echo "git rm -r --cached .                ---> removes git cache (ignorant files)"
 }
 
-nodeUpgrade() {
+nodeUp() {
   local nodeVersion=$(node -v)
   nvm install node --latest-npm --reinstall-packages-from=$nodeVersion
   nvm alias default node
@@ -20,13 +20,13 @@ cloneSub() {
 }
 
 if [[ "`uname`" == "Darwin"* ]]; then
-  alias update="brew update && brew upgrade && brew cask upgrade && brew cleanup && npm -g upgrade && npm cache verify && sudo gem update --system && sudo gem update && gem update --user && gem cleanup --user && sudo gem cleanup"
+  alias update="sudo gem update --system && sudo gem update && gem update --user && gem cleanup --user && sudo gem cleanup && brew update && brew upgrade && brew cask upgrade && brew cleanup && npm -g upgrade && npm cache verify && npm -g outdated"
   alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
   # source $HOME/shellscripts/iterm_shell_integration.zsh
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Arch"* ]]; then
-  alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm"
+  alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm && npm -g upgrade && npm cache verify && npm -g outdated"
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
-  alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm -g upgrade && npm cache verify"
+  alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm -g upgrade && npm cache verify && npm -g outdated"
 fi
 
 alias up="update"
