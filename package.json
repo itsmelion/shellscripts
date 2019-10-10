@@ -1,0 +1,10 @@
+{
+  "name": "lion-shellscripts",
+  "version": "1.0.0",
+  "description": "my shell utilities",
+  "main": "index.js",
+  "repository": "git@github.com:itsmelion/shellscripts.git",
+  "author": "Christhopher Lion <christhopherleao@icloud.com>",
+  "license": "MIT",
+  "private": false
+}
