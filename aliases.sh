@@ -21,7 +21,7 @@ cloneSub() {
 
 if [[ "`uname`" == "Darwin"* ]]; then
   alias update="sudo gem update && gem update --user && gem cleanup --user && sudo gem cleanup && brew update && brew upgrade && brew cask upgrade && brew cleanup && npm -g upgrade && npm cache verify && npm -g outdated"
-  alias sketch="sudo date 0314223218 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
+  alias sketch="sudo date 1014193019 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
   # source $HOME/shellscripts/iterm_shell_integration.zsh
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Arch"* ]]; then
   alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm && npm -g upgrade && npm cache verify && npm -g outdated"
@@ -42,13 +42,17 @@ alias restart="docker-compose restart"
 alias containers="ctop -s mem"
 alias log="docker-compose logs -f --tail 20"
 alias logtail="docker-compose logs -f --tail 100"
-alias build="docker-compose pull && sudo docker-compose build --no-cache --pull"
-alias rebuild="sudo docker-compose build --pull"
+alias build="docker-compose pull && docker-compose build --pull --parallel"
 alias up="docker-compose up -d"
 alias docker-start="sudo systemctl start docker"
 alias docker-on="sudo systemctl start docker"
 alias docker-stop="sudo systemctl stop docker"
 alias docker-off="sudo systemctl stop docker"
+
+rebuild() {
+  docker-compose pull $1
+  docker-compose build $1 --pull
+}
 
 alias update-sub="git submodule update --init --recursive"
 alias crlf="find ./ ! -path \"./node_modules/*\" -type f -exec dos2unix {} \;"
