@@ -1,6 +1,6 @@
 {
   "name": "lion-shellscripts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "my shell utilities",
   "main": "./index.js",
   "author": "Christhopher Lion <christhopherleao@icloud.com>",
