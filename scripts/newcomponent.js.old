@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+const args = process.argv.slice(2);
+const componentName = args[0];
+
+const copy = (file, ext) => {
+  const folder = `${process.cwd()}/${componentName}`;
+  const from = path.join(__dirname, 'markup', file);
+  const to = `${folder}/${componentName}${ext}`;
+
+  if (!fs.existsSync(folder)) fs.mkdirSync(folder);
+  else console.warn('Folder already exists.. Care: it will override your stuff.')
+
+  return fs.copyFile(from, to, (err) => {
+    if (err) throw err;
+    console.log(`${componentName}${ext} created!`);
+  });
+}
+
+const createJsx = () => copy('Component.jsx', '.jsx');
+const createStyled = () => copy('styled.js', '.styled.js');
+const createTest = () => copy('test.js', '.test.js');
+const createStory = () => copy('story.js', '.story.js');
+
+(() => {
+  createJsx();
+  createStyled();
+  createTest();
+  createStory();
+})();
+
+process.exit(0);

@@ -1,18 +1,3 @@
-## Installation
-
-clone at your `$HOME` and add each script file on your `~/.zshrc` file
-ex:
-```shell
-if grep -q Microsoft /proc/version; then
-  echo "Detected you are using WSL(Linux) on Windows, setting up your shell..."
-  export WINDOWS=/mnt/c/Users/Lion
-  source $WINDOWS/scripts/aliases.sh
-else
-  source $HOME/scripts/zshconfig.sh
-  source $HOME/scripts/aliases.sh
-fi
-```
-
 ## OS Setup script
 RUN: `setup/[OS].bash`
 
@@ -46,4 +31,13 @@ sshSetup () {
   cd $HOME
   printf "\n»  SSH setup Complete\n"
 }
+```
+
+## Create components
+Create a ReactComponent (relative to current folder)
+```
+newcomp <NAME>
+newfunc <NAME>
+newpure <NAME>
+nativecomp <NAME>
 ```

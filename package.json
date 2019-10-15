@@ -2,9 +2,26 @@
   "name": "lion-shellscripts",
   "version": "1.0.0",
   "description": "my shell utilities",
-  "main": "index.js",
-  "repository": "git@github.com:itsmelion/shellscripts.git",
+  "main": "./index.js",
   "author": "Christhopher Lion <christhopherleao@icloud.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "start": "npm link",
+    "postinstall": "node ./install"
+  },
+  "bin": {
+    "newcomp": "./scripts/newcomp.js"
+  },
+  "dependencies": {
+    "handlebars": "^4.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:itsmelion/shellscripts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itsmelion/shellscripts/issues"
+  },
+  "homepage": "https://github.com/itsmelion/shellscripts#readme"
 }
