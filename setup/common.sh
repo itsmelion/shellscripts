@@ -42,7 +42,6 @@ cd "$(dirname "$0")"
 
 # Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cat ../zshconfig.sh >> $HOME/.zshrc
 
 sshSetup
 gitSetup
@@ -55,4 +54,3 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 xdg-mime default code.desktop text/plain
 
 cp ../.editorconfig $HOME
-cp ../zshconfig.sh $HOME/.zshrc

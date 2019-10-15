@@ -7,11 +7,11 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "npm link",
-    "postinstall": "node ./install"
+    "start": "npm link"
   },
   "bin": {
-    "newcomp": "./scripts/newcomp.js"
+    "newcomp": "./scripts/newcomp.js",
+    "linkshell": "./scripts/linkshell.sh"
   },
   "dependencies": {
     "handlebars": "^4.4.3"

@@ -63,7 +63,6 @@ export WINDOWS=/mnt/c/Users/Lion
 export NPM_TOKEN=49974FB0-AFBA-42DC-A423-4A17EA010493
 alias W="$WINDOWS"
 
-source $HOME/shellscripts/aliases.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -74,10 +73,7 @@ fi
 
 export REACT_EDITOR="code"
 
-# NVM
-export NVM_LAZY_LOAD=true
-export NVM_DIR="$HOME/.nvm"
-
+source $LION_SHELL/aliases.sh
 source $ZSH/oh-my-zsh.sh
 
 # Android SDK
@@ -91,5 +87,8 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# NVM
+export NVM_LAZY_LOAD=true
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
