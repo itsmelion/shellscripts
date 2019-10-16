@@ -66,7 +66,8 @@ alias W="$WINDOWS"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR="nano"
+  export EDITOR="rmate"
+  printf '\n :: Welcome to ALIA server.. thread carefully\n\n'
 else
   export EDITOR="code"
 fi

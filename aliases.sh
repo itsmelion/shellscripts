@@ -49,6 +49,15 @@ alias docker-on="sudo systemctl start docker"
 alias docker-stop="sudo systemctl stop docker"
 alias docker-off="sudo systemctl stop docker"
 
+# SERVER
+alias nginx-restart="sudo service nginx restart"
+alias nginx-test="sudo nginx -c $HOME/nginx/nginx.conf -t"
+alias addssl="sudo certbot --nginx"
+
+if [[ -n $SSH_CONNECTION ]]; then
+  alias code="rmate"
+fi
+
 rebuild() {
   docker-compose pull $1
   docker-compose build $1 --pull
