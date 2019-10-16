@@ -2,7 +2,7 @@
 
 sshSetup () {
   echo "\n»  SSH setup\n"
-  local yn GIT_TOKEN
+  local yn
 
   if [ -d "$HOME/.ssh" ]; then
     echo "You already have a .ssh folder\n"
@@ -17,14 +17,18 @@ sshSetup () {
   else mkdir -m 700 $HOME/.ssh;
   fi
 
-  cd $HOME/.ssh
-  read -p "\nEnter your git access token: " GIT_TOKEN
-  curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/id_rsa
-  curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/id_rsa.pub
-  curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/known_hosts
-  chmod 644 id_rsa.pub
-  chmod 600 id_rsa
-  cd $HOME
+  if [ -z $GIT_TOKEN ]; then
+    local GIT_TOKEN
+    read -p "\nEnter your git access token: " GIT_TOKEN
+  fi
+
+  curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O "$HOME/.ssh/id_rsa" -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/id_rsa
+  curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O "$HOME/.ssh/id_rsa.pub" -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/id_rsa.pub
+  curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -O "$HOME/.ssh/known_hosts" -fsSL https://api.github.com/repos/itsmelion/keychain/contents/ssh/known_hosts
+
+  chmod 644 $HOME/.ssh/id_rsa.pub
+  chmod 600 $HOME/.ssh/id_rsa
+
   echo "\n»  SSH setup Complete\n"
 }
 
@@ -38,13 +42,20 @@ gitSetup () {
   git config --global core.excludesfile $HOME/.gitignore
 }
 
-cd "$(dirname "$0")"
+shellSecrets() {
+  local GIT_TOKEN
+  read -p "\nEnter your git access token: " GIT_TOKEN
+
+  curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -fsSL https://api.github.com/repos/itsmelion/keychain/contents/shell.sh > $HOME/.secrets.sh
+  sshSetup
+}
+
 
 # Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-sshSetup
 gitSetup
+shellSecrets
 
 echo "\n\n»  Installing nice apps..\n"
 
@@ -53,4 +64,4 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 xdg-mime default code.desktop text/plain
 
-cp ../.editorconfig $HOME
+cp $(dirname "$0")/.editorconfig $HOME
