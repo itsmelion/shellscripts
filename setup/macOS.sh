@@ -26,7 +26,7 @@ brew install watchman
 brew install ctop
 brew install rmate
 # brew install cocoapods
-brew install cocoapods --devel
+brew install cocoapods
 brew cask install docker-edge
 brew cask install visual-studio-code-insiders
 brew cask install insomnia
@@ -55,4 +55,4 @@ gem install --user-install cocoapods --pre
 
 echo 'fine.. now install Docker, Photoshop, WhatsApp and Trello Spark.. then you are ready'
 echo 'optional JDK8 (for native)'
-echo 'brew cask install adoptopenjdk8'
+echo 'brew cask install java'
