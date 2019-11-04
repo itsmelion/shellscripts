@@ -48,10 +48,10 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR="rmate"
   printf '\n :: Welcome to ALIA server.. thread carefully\n\n'
 else
-  export EDITOR="code"
+  export EDITOR="code-insiders"
 fi
 
-export REACT_EDITOR="code"
+export REACT_EDITOR="code-insiders"
 
 source $LION_SHELL/aliases.sh
 source $HOME/.secrets.sh
@@ -67,6 +67,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # NVM
 export NVM_LAZY_LOAD=true
