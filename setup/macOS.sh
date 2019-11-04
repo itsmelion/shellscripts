@@ -25,6 +25,7 @@ brew install gnupg
 brew install watchman
 brew install ctop
 brew install rmate
+brew install fish
 # brew install cocoapods
 brew install cocoapods
 brew cask install docker-edge
