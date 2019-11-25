@@ -69,6 +69,12 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+# /Ruby
+
 # NVM
 export NVM_LAZY_LOAD=true
 export NVM_DIR="$HOME/.nvm"
