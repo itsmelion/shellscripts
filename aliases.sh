@@ -68,3 +68,8 @@ rebuild() {
 
 alias update-sub="git submodule update --init --recursive"
 alias crlf="find ./ ! -path \"./node_modules/*\" -type f -exec dos2unix {} \;"
+
+# Deletes a file recursively
+prune() {
+  find . -name $1 -exec rm -rf {} \;
+}
