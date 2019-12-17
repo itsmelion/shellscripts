@@ -14,7 +14,7 @@
     "linkshell": "./scripts/linkshell.sh"
   },
   "dependencies": {
-    "handlebars": "^4.5.1"
+    "handlebars": "^4.5.3"
   },
   "repository": {
     "type": "git",

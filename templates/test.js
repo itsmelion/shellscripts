@@ -1,8 +1,8 @@
-import 'jest-styled-components';
 import React from 'react';
 import { render } from 'enzyme';
+import 'jest-styled-components';
 
-import {{componentName}} from './{{componentName}}.jsx';
+import {{componentName}} from './{{componentName}}';
 
 describe('<{{componentName}} />', () => {
   it('should render successfully', () => {

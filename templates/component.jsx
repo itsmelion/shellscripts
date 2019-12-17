@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { Wrapper } from './{{componentName}}.styled.js';
+import { Wrapper } from './{{componentName}}.styled';
 
 const {{componentName}} = (props) => (
   <Wrapper>
