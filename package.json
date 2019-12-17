@@ -3,7 +3,11 @@
   "version": "1.1.2",
   "description": "my shell utilities",
   "main": "./index.js",
-  "author": "Christhopher Lion <christhopherleao@icloud.com>",
+  "author": {
+    "name": "Christhopher Lion",
+    "email": "christhopherlion@icloud.com",
+    "url": "https://lion.alia.ml/"
+  },
   "license": "MIT",
   "private": false,
   "scripts": {
