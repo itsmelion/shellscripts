@@ -1,1 +1,2 @@
-process.exit(0);
+console.info('Nothing to do...');
+process.exitCode = 0;
