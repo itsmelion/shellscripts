@@ -34,4 +34,4 @@ const copy = (file, ext) => {
   copy(templates.story, '.story.jsx');
 })()
 
-process.exit(0);
+process.exitCode = 0;
