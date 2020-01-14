@@ -21,8 +21,8 @@ const copy = (file, ext) => {
   const template = Handlebars.compile(file)({ componentName });
   const to = `${folder}/${componentName}${ext}`;
 
-  if (!fs.existsSync(folder)) fs.mkdirSync(folder);
-  else console.warn('Folder already exists.. it may override your stuff.');
+  if (!fs.existsSync(folder)) { fs.mkdirSync(folder); }
+  else { console.warn('Folder already exists.. it may override your stuff.'); }
 
   return fs.writeFileSync(to, template, 'utf8');
 }

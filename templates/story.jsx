@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import {{componentName}} from './{{componentName}}';
 
 storiesOf('{{componentName}}', module)
-  .add('DESCRIPTION', () => (
+  .add('default', () => (
     <{{componentName}} onClick={action('clicked')}>
       Hello World!
     </{{componentName}}>

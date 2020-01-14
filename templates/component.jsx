@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Wrapper } from './{{componentName}}.styled';
 
 const {{componentName}} = (props) => (
@@ -8,12 +8,12 @@ const {{componentName}} = (props) => (
   </Wrapper>
 );
 
-{{componentName}}.defaultProps = {
-  // name: '',
-};
+// {{componentName}}.defaultProps = {
+//   name: '',
+// };
 
-{{componentName}}.propTypes = {
-  // name: PropTypes.string
-};
+// {{componentName}}.propTypes = {
+//   name: PropTypes.string
+// };
 
 export default memo({{componentName}});
