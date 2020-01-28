@@ -21,7 +21,8 @@ cloneSub() {
 
 if [[ "`uname`" == "Darwin"* ]]; then
   alias update="gem update --user && gem cleanup --user && gem cleanup && brew update && brew upgrade && brew cask upgrade && brew cleanup && npm -g upgrade && npm cache verify && npm -g outdated"
-  alias sketch="sudo date 1014193019 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
+  # Sketch hack.. (MONTH|DAY|HH|MIN|YY)
+  alias sketch="sudo date 0228111120 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
   # source $HOME/shellscripts/iterm_shell_integration.zsh
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Arch"* ]]; then
   alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm && npm -g upgrade && npm cache verify && npm -g outdated"
