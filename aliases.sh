@@ -3,6 +3,7 @@ help() {
   echo "update-sub                          ---> updates child submodules"
   echo "find . -name '*.js' -type f -delete ---> find and deletes files recursively"
   echo "git rm -r --cached .                ---> removes git cache (ignorant files)"
+  echo "'CMD + Shift + .'                   ---> toggle hidden folders on Mac"
 }
 
 nodeUp() {
