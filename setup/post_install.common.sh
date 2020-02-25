@@ -2,6 +2,7 @@
 
 source $HOME/.nvm/nvm.sh # Load NVM to be able to run NPM properly
 npm i -g lion-shellscripts
+npm i -g eslint npm@latest
 
 LION_SHELL="$(npm root -g)/lion-shellscripts"
 

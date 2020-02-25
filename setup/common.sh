@@ -52,7 +52,7 @@ shellSecrets() {
 
 
 # Oh My ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 gitSetup
 shellSecrets
@@ -60,7 +60,7 @@ shellSecrets
 echo "\n\n»  Installing nice apps..\n"
 
 # Node NVM
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | zsh
 
 xdg-mime default code.desktop text/plain
 

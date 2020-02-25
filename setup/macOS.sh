@@ -44,11 +44,6 @@ brew cask install skype-preview
 brew cask install spotify
 brew cask install font-fira-code
 
-npm i -g eslint npm@latest
-
-curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
-
 source ./post_install.common.sh
 
 gem update --user-install
