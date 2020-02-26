@@ -21,11 +21,12 @@ source ./common.sh
 # Development Tools
 brew cask install iterm2-beta
 brew install node
-brew install gnupg
+brew install gpg-suite-no-mail
 brew install watchman
 brew install ctop
 brew install rmate
-brew install fish
+brew install yarn
+# brew install fish
 # brew install cocoapods
 brew install cocoapods
 brew cask install docker-edge
