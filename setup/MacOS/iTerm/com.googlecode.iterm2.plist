@@ -1693,8 +1693,10 @@
 	<string>0 163 224 275 0 0 3200 1777 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1200 1016 799 448 0 0 3200 1777 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>1290 1057 620 392 0 0 3200 1777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2295 75 905 1702 0 0 3200 1777 </string>
+	<string>2475 78 725 1699 0 0 3200 1777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2295,7 +2297,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -2333,7 +2335,7 @@
 			<key>Transparency</key>
 			<integer>0</integer>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -2343,7 +2345,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<integer>1</integer>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -2354,6 +2356,8 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.10beta2</string>
+		<string>3.3.10beta3</string>
 		<string>3.3.10beta1</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
@@ -2370,15 +2374,17 @@
 	<key>NoSyncInstallationId</key>
 	<string>B5B0E195-B1A2-4FBB-BC61-0B5799F34BFB</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>6</integer>
+	<integer>80</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>604510842.98551202</real>
+	<real>604597723.099576</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -3113,6 +3119,8 @@
 	<real>604338042.985376</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -3148,6 +3156,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/generous_imac_4/shellscripts/setup/MacOS/iTerm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
@@ -3159,8 +3169,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-25T18:06:29Z</date>
+	<date>2020-04-16T10:20:16Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
@@ -3174,10 +3186,12 @@
 	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>1</integer>
+	<key>UseBorder</key>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.10beta1</string>
+	<string>3.3.10beta3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
