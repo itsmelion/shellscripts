@@ -36,8 +36,8 @@ alias upgrade="update"
 alias code="code-insiders"
 alias zshrc="code ~/.zshrc"
 
-alias j13="export JAVA_HOME=`/usr/libexec/java_home -v 13`; java -version"
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+j14() { export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version }
+j8() { export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version }
 # Ultility to code remote stuff on editor by tunneling
 alias alia="ssh -R 52698:localhost:52698 api.alia.ml"
 
