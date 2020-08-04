@@ -47,7 +47,6 @@ shellSecrets() {
   read -p "\nEnter your git access token: " GIT_TOKEN
 
   curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -fsSL https://api.github.com/repos/itsmelion/keychain/contents/shell.sh > $HOME/.secrets.sh
-  sshSetup
 }
 
 
@@ -56,6 +55,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 gitSetup
 shellSecrets
+sshSetup
 
 echo "\n\n»  Installing nice apps..\n"
 
