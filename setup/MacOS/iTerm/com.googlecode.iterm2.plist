@@ -1648,6 +1648,8 @@
 	<string>/Applications</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
+	<key>NSOverlayScrollersFallBackForAccessoryViews</key>
+	<false/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -1693,10 +1695,12 @@
 	<string>0 163 224 275 0 0 3200 1777 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1200 1016 799 448 0 0 3200 1777 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>1400 1250 400 135 0 0 3200 1775 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1290 1058 620 392 0 0 3200 1777 </string>
+	<string>1290 1058 620 392 0 0 3200 1775 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2475 78 725 1699 0 0 3200 1777 </string>
+	<string>2460 83 740 1692 0 0 3200 1775 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2356,10 +2360,16 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.10beta2</string>
-		<string>3.3.10beta1</string>
-		<string>3.3.10beta4</string>
+		<string>3.3.12beta3</string>
 		<string>3.3.10beta3</string>
+		<string>3.3.11beta1</string>
+		<string>3.3.12beta2</string>
+		<string>3.3.10beta2</string>
+		<string>3.4.0beta2</string>
+		<string>3.3.10beta4</string>
+		<string>3.3.12beta1</string>
+		<string>3.3.10beta1</string>
+		<string>3.4.0beta1</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -2374,8 +2384,10 @@
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>B5B0E195-B1A2-4FBB-BC61-0B5799F34BFB</string>
+	<key>NoSyncLastOSVersion</key>
+	<string>Version 10.16 (Build 20A5323l)</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>126</integer>
+	<integer>248</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2493,6 +2505,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>selectionLength</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -2504,6 +2524,14 @@
 				<string>triggerName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>parentSession</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -2622,6 +2650,14 @@
 				<true/>
 				<key>name</key>
 				<string>tmuxStatusLeft</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>selection</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2881,11 +2917,11 @@
 		<array>
 			<dict>
 				<key>isTerminal</key>
-				<false/>
+				<true/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
-				<integer>1</integer>
+				<integer>0</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -3081,17 +3117,17 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
+				<false/>
 				<key>name</key>
-				<string>tmuxWindow</string>
+				<string>currentSession</string>
 				<key>nonterminalContext</key>
-				<integer>0</integer>
+				<integer>1</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession</string>
+				<string>tmuxWindow</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3124,6 +3160,12 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncRestoreWindowsCount</key>
+	<integer>0</integer>
+	<key>NoSyncSuppressRestartSessionConfirmationAlert</key>
+	<true/>
+	<key>NoSyncSuppressRestartSessionConfirmationAlert_selection</key>
+	<integer>0</integer>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>604338042.985376</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -3165,24 +3207,28 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/generous_imac_4/shellscripts/setup/MacOS/iTerm</string>
+	<key>PreventEscapeSequenceFromClearingHistory</key>
+	<false/>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing_new.xml?shard=51</string>
+	<string>https://iterm2.com/appcasts/testing_modern.xml?shard=51</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-15T11:03:12Z</date>
+	<date>2020-07-29T14:39:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>2713049741</integer>
+	<integer>2280317827</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -3204,7 +3250,7 @@
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.10beta4</string>
+	<string>3.4.0beta2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
