@@ -3,12 +3,6 @@
   "version": "1.1.6",
   "description": "my shell utilities",
   "main": "./index.js",
-  "author": {
-    "name": "Christhopher Lion",
-    "email": "christhopherlion@icloud.com",
-    "url": "https://lion.alia.ml/"
-  },
-  "license": "MIT",
   "private": false,
   "scripts": {
     "start": "npm link"
@@ -18,14 +12,15 @@
     "linkshell": "./scripts/linkshell.sh"
   },
   "dependencies": {
-    "handlebars": "^4.7.6"
+    "handlebars": "4.7.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:itsmelion/shellscripts.git"
+  "author": {
+    "name": "Christhopher Lion",
+    "email": "christhopherlion@icloud.com",
+    "url": "https://lion.alia.ml/"
   },
-  "bugs": {
-    "url": "https://github.com/itsmelion/shellscripts/issues"
-  },
-  "homepage": "https://github.com/itsmelion/shellscripts#readme"
+  "repository": "https://github.com/itsmelion/shellscripts",
+  "bugs": "https://github.com/itsmelion/shellscripts/issues",
+  "homepage": "https://github.com/itsmelion/shellscripts#readme",
+  "license": "MIT"
 }
