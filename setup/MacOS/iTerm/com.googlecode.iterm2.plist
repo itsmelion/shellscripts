@@ -1700,7 +1700,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>1290 1058 620 392 0 0 3200 1775 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2460 83 740 1692 0 0 3200 1775 </string>
+	<string>2475 83 740 1692 0 0 3200 1775 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2360,16 +2360,19 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.4.0beta3</string>
 		<string>3.3.12beta3</string>
-		<string>3.3.10beta3</string>
-		<string>3.3.11beta1</string>
-		<string>3.3.12beta2</string>
-		<string>3.3.10beta2</string>
-		<string>3.4.0beta2</string>
 		<string>3.3.10beta4</string>
+		<string>3.4.0beta5</string>
 		<string>3.3.12beta1</string>
+		<string>3.3.10beta3</string>
+		<string>3.4.0beta2</string>
+		<string>3.4.0beta4</string>
 		<string>3.3.10beta1</string>
+		<string>3.3.11beta1</string>
 		<string>3.4.0beta1</string>
+		<string>3.3.10beta2</string>
+		<string>3.3.12beta2</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -2382,12 +2385,16 @@
 		<key>topLeft</key>
 		<string>{1877, 1589}</string>
 	</dict>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
+	<key>NoSyncIgnoreSystemWindowRestoration</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>B5B0E195-B1A2-4FBB-BC61-0B5799F34BFB</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 10.16 (Build 20A5323l)</string>
+	<string>Version 11.0 (Build 20A5364e)</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>248</integer>
+	<integer>292</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2506,6 +2513,14 @@
 				<true/>
 				<key>name</key>
 				<string>selectionLength</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>processTitle</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2804,6 +2819,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.currentSession.processTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -2919,7 +2942,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession</string>
+				<string>tmuxWindow</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3039,6 +3062,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentSession.processTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>id</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -3117,19 +3148,19 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxWindow</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
 			</dict>
 		</array>
 		<key>4</key>
@@ -3224,7 +3255,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-07-29T14:39:35Z</date>
+	<date>2020-09-04T09:29:57Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -3249,8 +3280,10 @@
 	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.4.0beta2</string>
+	<string>3.4.0beta5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

@@ -15,9 +15,10 @@ nodeUp() {
 }
 
 cloneSub() {
+  local MAIN=$(git symbolic-ref --short HEAD)
   git clone --recursive $1 $2
   cd $2
-  git submodule foreach --recursive "git checkout master"
+  git submodule foreach --recursive "git checkout $MAIN"
 }
 
 if [[ "`uname`" == "Darwin"* ]]; then
