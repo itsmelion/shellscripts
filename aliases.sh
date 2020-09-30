@@ -24,7 +24,6 @@ cloneSub() {
 if [[ "`uname`" == "Darwin"* ]]; then
   update() {
     # get updates
-    softwareupdate --download --all &
     brew update &
     gem update --user &
     npm -g upgrade &
@@ -38,7 +37,7 @@ if [[ "`uname`" == "Darwin"* ]]; then
     brew cleanup &
     npm cache verify &
     wait
-    # else
+    softwareupdate --download --all
     npm -g outdated
   }
   # Sketch hack.. (MONTH|DAY|HH|MIN|YY)
