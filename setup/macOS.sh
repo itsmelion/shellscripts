@@ -7,7 +7,7 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 xcode-select --install
 
 # homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install zsh
 brew install zsh-completions
 brew install wget
@@ -26,9 +26,8 @@ brew install watchman
 brew install ctop
 brew install rmate
 brew install yarn
-# brew install fish
+# not using cocoapods from brew because dont have option for the Beta version
 # brew install cocoapods
-brew install cocoapods
 brew cask install docker-edge
 brew cask install visual-studio-code-insiders
 brew cask install insomnia
@@ -51,5 +50,4 @@ gem update --user-install
 gem install --user-install cocoapods --pre
 
 echo 'fine.. now install Docker, Photoshop, WhatsApp and Trello Spark.. then you are ready'
-echo 'optional JDK8 (for native)'
-echo 'brew cask install java'
+echo 'optional JDK (for native)'
