@@ -1,33 +1,33 @@
 #!/bin/sh
+# normal minimum is 15 (225 ms)
+defaults write -g InitialKeyRepeat -int 500
 
-defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+# normal minimum is 2 (30 ms)
+defaults write -g KeyRepeat -int 50
 
 # xcode command line - Select: "Get xcode" and go get a coffee (preferably far from your desk :)
 xcode-select --install
 
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install zsh
-brew install zsh-completions
 brew install wget
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 brew update
 brew upgrade
 
-source ./common.sh
+source ./setup/common.sh
 
 # Development Tools
 brew cask install iterm2-beta
 brew install node
-brew install gpg-suite-no-mail
 brew install watchman
 brew install ctop
 brew install rmate
 brew install yarn
 # not using cocoapods from brew because dont have option for the Beta version
 # brew install cocoapods
+brew cask install gpg-suite-no-mail
 brew cask install docker-edge
 brew cask install visual-studio-code-insiders
 brew cask install insomnia
@@ -44,7 +44,7 @@ brew cask install skype-preview
 brew cask install spotify
 brew cask install font-fira-code
 
-source ./post_install.common.sh
+source ./setup/post_install.common.sh
 
 gem update --user-install
 gem install --user-install cocoapods --pre

@@ -34,11 +34,11 @@ sshSetup () {
 
 # Git Setup
 gitSetup () {
-  cp ../git/.gitconfig $HOME
+  cp $(dirname "$1")/git/.gitconfig $HOME
   git config --global user.name "Christhopher Lion"
   git config --global user.email christhopherleao@icloud.com
   git config --global core.editor code
-  cp ../git/.gitignore $HOME
+  cp $(dirname "$1")/git/.gitignore $HOME
   git config --global core.excludesfile $HOME/.gitignore
 }
 
@@ -64,4 +64,4 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
 
 xdg-mime default code.desktop text/plain
 
-cp $(dirname "$0")/.editorconfig $HOME
+cp $(dirname "$1")/.editorconfig $HOME

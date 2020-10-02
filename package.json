@@ -5,7 +5,9 @@
   "main": "./index.js",
   "private": false,
   "scripts": {
-    "start": "npm link"
+    "mac": "./setup/macOS.sh",
+    "arch": "./setup/arch.bash",
+    "ubuntu": "./setup/ubuntu.bash"
   },
   "bin": {
     "newcomp": "./scripts/newcomp.js",
