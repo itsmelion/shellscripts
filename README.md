@@ -1,5 +1,5 @@
 ## OS Setup script
-RUN: `setup/[OS].bash`
+RUN: `./setup/[OS].bash`
 
 ### Cloning with SSH?
 get started with this utility:
