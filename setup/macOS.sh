@@ -25,6 +25,7 @@ brew install watchman
 brew install ctop
 brew install rmate
 brew install yarn
+brew install zsh-syntax-highlighting
 # not using cocoapods from brew because dont have option for the Beta version
 # brew install cocoapods
 brew cask install gpg-suite-no-mail

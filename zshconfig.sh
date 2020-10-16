@@ -57,6 +57,7 @@ export REACT_EDITOR="code-insiders"
 source $LION_SHELL/aliases.sh
 source $HOME/.secrets.sh
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Android SDK
 if [[ "`uname`" == "Darwin"* ]]; then
@@ -79,3 +80,5 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export NVM_LAZY_LOAD=true
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+plugins=(nvm, zsh-syntax-highlighting)
