@@ -44,6 +44,10 @@ brew cask install slack-beta
 brew cask install skype-preview
 brew cask install spotify
 brew cask install font-fira-code
+brew cask install font-hack-nerd-font
+brew cask install font-monoid-nerd-font
+brew cask install font-mononoki-nerd-font
+brew cask install font-overpass-nerd-font
 
 source ./setup/post_install.common.sh
 
