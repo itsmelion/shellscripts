@@ -8,7 +8,9 @@ help() {
 
 nodeUp() {
   local nodeVersion=$(node -v)
-  nvm install node --latest-npm --reinstall-packages-from=$nodeVersion
+  nvm install node --latest-npm --reinstall-packages-from=node
+  # OR --reinstall-packages-from=$nodeVersion
+  # OR --reinstall-packages-from=current
   nvm alias default node
   nvm uninstall $nodeVersion
   nvm cache clear
@@ -49,10 +51,9 @@ elif [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
   alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm -g upgrade && npm cache verify && npm -g outdated"
 fi
 
-alias up="update"
 alias upgrade="update"
 alias code="code-insiders"
-alias zshrc="code ~/.zshrc"
+alias zshrc="code $LION_SHELL/zshconfig.sh"
 
 j14() { export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version }
 j8() { export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version }
