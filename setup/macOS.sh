@@ -21,6 +21,7 @@ source ./setup/common.sh
 # Development Tools
 brew cask install iterm2-beta
 brew install node
+brew install git
 brew install watchman
 brew install ctop
 brew install rmate
