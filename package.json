@@ -10,8 +10,8 @@
     "ubuntu": "./setup/ubuntu.bash"
   },
   "bin": {
-    "newcomp": "./scripts/newcomp.js",
-    "linkshell": "./scripts/linkshell.sh"
+    "newcomp": "scripts/newcomp.js",
+    "linkshell": "scripts/linkshell.sh"
   },
   "dependencies": {
     "handlebars": "4.7.6"
