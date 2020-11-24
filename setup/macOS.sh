@@ -11,6 +11,7 @@ xcode-select --install
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install wget
+brew install coreutils
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 brew update
@@ -49,6 +50,9 @@ brew cask install font-hack-nerd-font
 brew cask install font-monoid-nerd-font
 brew cask install font-mononoki-nerd-font
 brew cask install font-overpass-nerd-font
+
+# JDK (for RNative)
+# brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 
 source ./setup/post_install.common.sh
 

@@ -2356,6 +2356,8 @@
 	<integer>1</integer>
 	<key>UseBorder</key>
 	<false/>
+	<key>UseExperimentalFontMetrics</key>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>findMode_iTerm</key>
