@@ -60,7 +60,7 @@ sshSetup
 echo "\n\n»  Installing nice apps..\n"
 
 # Node NVM
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 xdg-mime default code.desktop text/plain
 
