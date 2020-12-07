@@ -7,8 +7,6 @@ sudo apt full-upgrade -y
 printf "\n\n»  Setting things up\n"
 source ./common.sh
 
-sudo apt-add-repository ppa:fish-shell/release-3
-
 sudo apt update
 sudo apt install -y \
   build-essential \
@@ -17,7 +15,6 @@ sudo apt install -y \
   fonts-firacode \
   apt-transport-https \
   gnupg \
-  fish \
   zsh
 
 # CTOP

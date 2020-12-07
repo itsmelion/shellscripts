@@ -13,7 +13,6 @@ sudo pacman -S \
 otf-fira-code \
 chrome-gnome-shell \
 guake \
-fish \
 nodejs \
 npm \
 yarn \
