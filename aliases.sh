@@ -55,7 +55,7 @@ alias upgrade="update"
 alias code="code-insiders"
 alias zshrc="code $LION_SHELL/zshconfig.sh"
 
-j14() { export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version }
+j15() { export JAVA_HOME=`/usr/libexec/java_home -v 15`; java -version }
 j8() { export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version }
 # Ultility to code remote stuff on editor by tunneling
 alias alia="ssh -R 52698:localhost:52698 api.alia.ml"

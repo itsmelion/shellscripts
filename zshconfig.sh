@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # (robbyrussell | agnoster)
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -43,11 +43,9 @@ export LC_ALL="en_US.UTF-8"
 export GPG_TTY=$(tty)
 
 
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR="rmate"
-  printf '\n :: Welcome to ALIA server.. thread carefully\n\n'
 else
   export EDITOR="code-insiders"
 fi
@@ -100,7 +98,7 @@ load-nvmrc() {
     nvm use default
   fi
 }
-add-zsh-hook chpwd load-nvmrc
+add-zsh-hook chpwd
 load-nvmrc
 
 plugins=(nvm, zsh-syntax-highlighting)
