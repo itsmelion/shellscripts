@@ -98,7 +98,8 @@ load-nvmrc() {
     nvm use default
   fi
 }
-add-zsh-hook chpwd
+add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+# End: Calling nvm use automatically
 
 plugins=(nvm, zsh-syntax-highlighting)
