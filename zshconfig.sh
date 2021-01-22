@@ -55,7 +55,6 @@ export REACT_EDITOR="code-insiders"
 source $LION_SHELL/aliases.sh
 source $HOME/.secrets.sh
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Android SDK
 if [[ "`uname`" == "Darwin"* ]]; then
