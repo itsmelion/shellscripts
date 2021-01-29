@@ -75,6 +75,12 @@ alias docker-on="sudo systemctl start docker"
 alias docker-stop="sudo systemctl stop docker"
 alias docker-off="sudo systemctl stop docker"
 
+# DEV
+publish() {
+  local defaultTag='next'
+  yarn publish --prerelease --tag ${defaultTag:-$1}
+}
+
 # SERVER
 alias nginx-restart="sudo service nginx restart"
 alias nginx-test="sudo nginx -c $HOME/nginx/nginx.conf -t"
