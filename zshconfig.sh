@@ -42,6 +42,8 @@ export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export GPG_TTY=$(tty)
 
+# ! this is weird
+export NODE_OPTIONS='--max-old-space-size=4096'
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
