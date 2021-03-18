@@ -1,6 +1,6 @@
 export WINDOWS_HOME='/mnt/c/Users/Christhopher Leao'
-export W=$WINDOWS_HOME
-export WINDOWS=$WINDOWS_HOME
+export WINDOWS='/mnt/c/Users/Christhopher Leao'
+export W='/mnt/c/Users/Christhopher Leao'
 
 help() {
   echo "cloneSub <git-repo> <folder-name>   ---> clones repositories with submodules"
