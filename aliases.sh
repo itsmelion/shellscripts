@@ -79,6 +79,7 @@ alias docker-stop="sudo systemctl stop docker"
 alias docker-off="sudo systemctl stop docker"
 
 # DEV
+alias peers="npx install-peerdeps"
 publish() {
   local defaultTag='next'
   yarn publish --prerelease --tag ${defaultTag:-$1}
