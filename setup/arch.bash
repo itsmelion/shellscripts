@@ -4,10 +4,10 @@ printf "»  Updating system"
 sudo pacman -Syu
 
 printf "»  installing core packages..."
-sudo pacman -Sy curl wget openssh git base-devel yajl yay nano docker docker-compose
+sudo pacman -Sy curl wget openssh git base-devel yay nano
 
 printf "»  Setting things up"
-source ./common.sh
+source $(dirname "$1")/setup/common.sh
 
 sudo pacman -S \
 otf-fira-code \
@@ -30,4 +30,7 @@ yay ctop --noconfirm
 yay opensiddur-hebrew-fonts --noconfirm
 yay ttf-mac-fonts --noconfirm
 
-source ./post_install.common.sh
+source $(dirname "$1")/setup/post_install.common.sh
+
+
+echo "skipped installation of 'docker docker-compose' until check is is WSL"
