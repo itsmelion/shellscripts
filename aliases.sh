@@ -18,7 +18,7 @@ nodeUp() {
   nvm alias default node
   nvm uninstall $nodeVersion
   nvm cache clear
-  linkShell
+  linkshell
 }
 
 cloneSub() {
