@@ -5,6 +5,7 @@
 
 [core]
 	editor = code-insiders
+  autocrlf = false
 
 [commit]
 	gpgsign = true
