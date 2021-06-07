@@ -1,4 +1,4 @@
-LION_SHELL="$(npm root -g)/lion-shellscripts"
+LION_SHELL="$(pwd)"
 echo "Overriding your ZSHRC to $LION_SHELL"
 echo "dont forget your secrets."
 
