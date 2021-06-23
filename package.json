@@ -11,7 +11,7 @@
   },
   "bin": {
     "newcomp": "scripts/newcomp.js",
-    "linkshell": "scripts/linkshell.sh"
+    "linkshell": "linkshell.sh"
   },
   "dependencies": {
     "handlebars": "4.7.7"
