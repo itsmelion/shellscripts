@@ -6,10 +6,10 @@ const Handlebars = require('handlebars');
 const templatesFolder = path.join(__dirname, '../templates');
 
 const templates = {
-  component: fs.readFileSync(path.join(templatesFolder, 'component.jsx'), 'utf8'),
-  styled: fs.readFileSync(path.join(templatesFolder, 'styled.js'), 'utf8'),
-  test: fs.readFileSync(path.join(templatesFolder, 'test.js'), 'utf8'),
-  story: fs.readFileSync(path.join(templatesFolder, 'story.jsx'), 'utf8'),
+  component: fs.readFileSync(path.join(templatesFolder, 'component.tsx'), 'utf8'),
+  styled: fs.readFileSync(path.join(templatesFolder, 'styled.ts'), 'utf8'),
+  test: fs.readFileSync(path.join(templatesFolder, 'test.ts'), 'utf8'),
+  story: fs.readFileSync(path.join(templatesFolder, 'story.tsx'), 'utf8'),
 };
 
 const args = process.argv.slice(2);
@@ -28,10 +28,10 @@ const copy = (file, ext) => {
 }
 
 (() => {
-  copy(templates.component, '.jsx');
-  copy(templates.styled, '.styled.js');
-  copy(templates.test, '.test.js');
-  copy(templates.story, '.story.jsx');
+  copy(templates.component, '.tsx');
+  copy(templates.styled, '.styled.ts');
+  copy(templates.test, '.test.ts');
+  copy(templates.story, '.story.tsx');
 })()
 
 process.exitCode = 0;
