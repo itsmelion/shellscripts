@@ -20,7 +20,7 @@ brew upgrade
 source ./setup/common.sh
 
 # Development Tools
-brew cask install iterm2-beta
+brew install iterm2-beta
 brew install node
 brew install git
 brew install watchman
@@ -30,26 +30,26 @@ brew install yarn
 brew install zsh-syntax-highlighting
 # not using cocoapods from brew because dont have option for the Beta version
 # brew install cocoapods
-brew cask install gpg-suite-no-mail
-brew cask install docker-edge
-brew cask install visual-studio-code-insiders
-brew cask install insomnia
-brew cask install gitkraken
-brew cask install sketch
+brew install gpg-suite-no-mail
+brew install docker-edge
+brew install visual-studio-code-insiders
+brew install insomnia
+brew install gitkraken
+brew install sketch
 
 # Browsers
-brew cask install google-chrome-canary
-brew cask install firefox-developer-edition
-brew cask install safari-technology-preview
+brew install google-chrome-canary
+# brew install firefox-developer-edition
+brew install safari-technology-preview
 
-brew cask install slack-beta
-brew cask install skype-preview
-brew cask install spotify
-brew cask install font-fira-code
-brew cask install font-hack-nerd-font
-brew cask install font-monoid-nerd-font
-brew cask install font-mononoki-nerd-font
-brew cask install font-overpass-nerd-font
+brew install slack-beta
+brew install skype-preview
+brew install spotify
+brew install font-fira-code
+# brew install font-hack-nerd-font
+# brew install font-monoid-nerd-font
+# brew install font-mononoki-nerd-font
+# brew install font-overpass-nerd-font
 
 # JDK (for RNative)
 # brew cask install adoptopenjdk/openjdk/adoptopenjdk8
