@@ -1,4 +1,3 @@
-#!/bin/sh
 # normal minimum is 15 (225 ms)
 defaults write -g InitialKeyRepeat -int 500
 
@@ -39,20 +38,22 @@ brew install sketch
 
 # Browsers
 brew install google-chrome-canary
-# brew install firefox-developer-edition
 brew install safari-technology-preview
+# brew install firefox-developer-edition
 
-brew install slack-beta
-brew install skype-preview
-brew install spotify
 brew install font-fira-code
+brew install slack-beta
+brew install spotify
+brew install steam
+brew install battle-net
+# brew install skype-preview
 # brew install font-hack-nerd-font
 # brew install font-monoid-nerd-font
 # brew install font-mononoki-nerd-font
 # brew install font-overpass-nerd-font
 
 # JDK (for RNative)
-# brew cask install adoptopenjdk/openjdk/adoptopenjdk8
+# brew install adoptopenjdk/openjdk/adoptopenjdk8
 
 source ./setup/post_install.common.sh
 
