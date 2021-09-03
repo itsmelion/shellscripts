@@ -65,3 +65,4 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 xdg-mime default code.desktop text/plain
 
 cp $(dirname "$1")/.editorconfig $HOME
+cp $(dirname "$1")/setup/custom.zsh-theme $ZSH_CUSTOM/themes/lion.zsh-theme

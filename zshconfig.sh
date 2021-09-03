@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # (robbyrussell | agnoster)
-ZSH_THEME="robbyrussell"
+ZSH_THEME="lion"
 
 
 # Uncomment the following line to use case-sensitive completion.
