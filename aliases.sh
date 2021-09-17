@@ -44,8 +44,9 @@ if [[ "`uname`" == "Darwin"* ]]; then
     brew cleanup &
     npm cache verify &
     wait
-    softwareupdate --download --all
+    mas upgrade &
     npm -g outdated
+    softwareupdate --download --all
   }
   # Sketch hack.. (MONTH|DAY|HH|MIN|YY)
   alias sketch="sudo date 0228111120 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"

@@ -27,6 +27,8 @@ brew install ctop
 brew install rmate
 brew install yarn
 brew install zsh-syntax-highlighting
+# MAS = Mac App Store Command Line
+brew install mas
 # not using cocoapods from brew because dont have option for the Beta version
 # brew install cocoapods
 brew install gpg-suite-no-mail
