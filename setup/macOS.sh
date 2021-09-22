@@ -59,8 +59,10 @@ brew install battle-net
 
 source ./setup/post_install.common.sh
 
-gem update --user-install
-gem install --user-install cocoapods --pre
+echo "OpenSSL is known to fail on macOS. Case that happens, run gem update with the following arguments:"
+echo "gem update --user -- --with-openssl-dir=/usr/local/Cellar/openssl@1.1/1.1.1l"
+gem update --user
+gem install --user cocoapods --pre
 
 echo 'fine.. now install Docker, Photoshop, WhatsApp and Trello Spark.. then you are ready'
 echo 'optional JDK (for native)'
