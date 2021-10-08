@@ -11,6 +11,9 @@ node_modules
 
 # Temp
 .sass-cache
+.cache
+.tmp
+.temp
 
 # Logs
 npm-debug.log
