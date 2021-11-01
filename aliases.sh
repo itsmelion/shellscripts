@@ -10,8 +10,20 @@ help() {
   echo "'CMD + Shift + .'                   ---> toggle hidden folders on Mac"
 }
 
-nodeUp() {
-  local nodeVersion=$(node -v)
+
+nvmInstall(){
+  nvm install $1 --latest-npm --reinstall-packages-from=node
+}
+
+noderange() {
+  local previous=$(nvm current)
+  nvm install $1 --latest-npm --reinstall-packages-from=current
+  nvm uninstall $previous
+  nvm cache clear
+}
+
+nodeup() {
+  local nodeVersion=$(nvm current)
   nvm install node --latest-npm --reinstall-packages-from=node
   # OR --reinstall-packages-from=$nodeVersion
   # OR --reinstall-packages-from=current
@@ -20,6 +32,7 @@ nodeUp() {
   nvm cache clear
   linkshell
 }
+alias nodeUp=nodeup
 
 cloneSub() {
   local MAIN=$(git symbolic-ref --short HEAD)

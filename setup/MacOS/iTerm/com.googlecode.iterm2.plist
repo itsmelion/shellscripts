@@ -3265,5 +3265,7 @@
 			</dict>
 		</array>
 	</dict>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 </dict>
 </plist>
