@@ -52,6 +52,7 @@ if [[ "`uname`" == "Darwin"* ]]; then
     wait
     brew upgrade --cask &
     wait
+    fg
     # cleanups
     gem cleanup --user &
     brew cleanup &
