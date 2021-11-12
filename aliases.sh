@@ -126,3 +126,18 @@ prune() {
 shellSecrets() {
   curl -H "Authorization: token $GIT_TOKEN" -H 'Accept: application/vnd.github.v4.raw' -fsSL https://api.github.com/repos/itsmelion/keychain/contents/shell.sh > $HOME/.secrets.sh
 }
+
+# AZURE KEYVAULT
+get-env() {
+  if ! hash jq 2>/dev/null
+    then
+      az keyvault secret show --vault-name hwbg-webhosting-keyvault --name $1
+    else
+      az keyvault secret show --vault-name hwbg-webhosting-keyvault --name $1 | jq -r '.value'
+  fi
+}
+
+set-env() {
+  az keyvault secret set --vault-name hwbg-webhosting-keyvault --name $1 --file $2
+}
+# AZURE KEYVAULT

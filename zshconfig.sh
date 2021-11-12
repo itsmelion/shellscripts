@@ -69,6 +69,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 # /Ruby
