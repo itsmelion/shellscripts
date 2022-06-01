@@ -69,11 +69,12 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 
-# Ruby
-export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+# Ruby
+# export PATH="/usr/local/opt/ruby/bin:$PATH"
+# export LDFLAGS="-L/usr/local/opt/ruby/lib"
+# export CPPFLAGS="-I/usr/local/opt/ruby/include"
 # /Ruby
 
 # NVM

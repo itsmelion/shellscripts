@@ -46,7 +46,7 @@ if [[ "`uname`" == "Darwin"* ]]; then
     # get updates
     brew update &
     gem update --user &
-    npm -g upgrade &
+    npm upgrade --location=global &
     wait
     brew upgrade &
     wait
@@ -59,16 +59,16 @@ if [[ "`uname`" == "Darwin"* ]]; then
     npm cache verify &
     wait
     mas upgrade &
-    npm -g outdated
+    npm outdated --location=global
     softwareupdate --download --all
   }
   # Sketch hack.. (MONTH|DAY|HH|MIN|YY)
   alias sketch="sudo date 0228111120 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
   # source $HOME/shellscripts/iterm_shell_integration.zsh
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Arch"* ]]; then
-  alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm && npm -g upgrade && npm cache verify && npm -g outdated"
+  alias update="sudo pacman -Syu && yay -Syu --aur --noconfirm && npm upgrade --location=global && npm cache verify && npm outdated --location=global"
 elif [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
-  alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm -g upgrade && npm cache verify && npm -g outdated"
+  alias update="sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && npm upgrade --location=global && npm cache verify && npm outdated --location=global"
 fi
 
 alias upgrade="update"
