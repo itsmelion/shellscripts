@@ -6,6 +6,7 @@ help() {
   echo "cloneSub <git-repo> <folder-name>   ---> clones repositories with submodules"
   echo "update-sub                          ---> updates child submodules"
   echo "find . -name '*.js' -type f -delete ---> find and deletes files recursively"
+  echo "prune SOME_FILE                     ---> find and deletes files recursively"
   echo "git rm -r --cached .                ---> removes git cache (ignorant files)"
   echo "'CMD + Shift + .'                   ---> toggle hidden folders on Mac"
 }
