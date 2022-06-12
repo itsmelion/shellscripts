@@ -42,3 +42,4 @@ git config --global core.excludesfile $HOME\.gitignore
 cp ../.editorconfig $HOME
 
 cd $HOME
+echo "https://github.com/randyrants/sharpkeys/releases to map keys to mac"
