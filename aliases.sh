@@ -45,6 +45,7 @@ cloneSub() {
 if [[ "`uname`" == "Darwin"* ]]; then
   update() {
     # get updates
+    mas upgrade
     brew update &
     gem update --user &
     npm upgrade --location=global &
@@ -59,7 +60,6 @@ if [[ "`uname`" == "Darwin"* ]]; then
     brew cleanup &
     npm cache verify &
     wait
-    mas upgrade &
     npm outdated --location=global
     softwareupdate --download --all
   }
