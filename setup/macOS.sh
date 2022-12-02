@@ -39,15 +39,20 @@ brew install gitkraken
 brew install sketch
 
 # Browsers
+brew install google-chrome
 brew install google-chrome-canary
 brew install safari-technology-preview
 # brew install firefox-developer-edition
 
+brew install java
+brew install flutter
+brew install android-studio
+
 brew install font-fira-code
 brew install slack-beta
 brew install spotify
-brew install steam
-brew install battle-net
+# brew install steam
+# brew install battle-net
 # brew install skype-preview
 # brew install font-hack-nerd-font
 # brew install font-monoid-nerd-font
@@ -59,8 +64,6 @@ brew install battle-net
 
 source ./setup/post_install.common.sh
 
-echo "OpenSSL is known to fail on macOS. Case that happens, run gem update with the following arguments:"
-echo "gem update --user -- --with-openssl-dir=/usr/local/Cellar/openssl@1.1/1.1.1l"
 gem update --user
 gem install --user cocoapods --pre
 

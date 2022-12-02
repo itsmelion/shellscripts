@@ -67,15 +67,18 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-
+# export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # Ruby
 # export PATH="/usr/local/opt/ruby/bin:$PATH"
-# export LDFLAGS="-L/usr/local/opt/ruby/lib"
-# export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
 # /Ruby
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@3/lib/pkgconfig"
 
 # NVM
 export NVM_LAZY_LOAD=true

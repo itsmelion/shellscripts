@@ -3,6 +3,9 @@ export WINDOWS='/mnt/c/Users/Christhopher Leao'
 export W='/mnt/c/Users/Christhopher Leao'
 
 help() {
+  echo "OpenSSL is known to fail on macOS. Case that happens, run gem update with the following arguments:"
+  echo "gem update --user -- --with-openssl-dir=/usr/local/Cellar/openssl@1.1/1.1.1s"
+  echo ""
   echo "cloneSub <git-repo> <folder-name>   ---> clones repositories with submodules"
   echo "update-sub                          ---> updates child submodules"
   echo "find . -name '*.js' -type f -delete ---> find and deletes files recursively"
@@ -10,7 +13,6 @@ help() {
   echo "git rm -r --cached .                ---> removes git cache (ignorant files)"
   echo "'CMD + Shift + .'                   ---> toggle hidden folders on Mac"
 }
-
 
 nvmInstall(){
   nvm install $1 --latest-npm --reinstall-packages-from=node
@@ -61,7 +63,8 @@ if [[ "`uname`" == "Darwin"* ]]; then
     npm cache verify &
     wait
     npm outdated --location=global
-    softwareupdate --download --all
+    softwareupdate --all
+    # flags --download
   }
   # Sketch hack.. (MONTH|DAY|HH|MIN|YY)
   alias sketch="sudo date 0228111120 && open /Applications/Sketch.app && sudo sntp -sS time.euro.apple.com"
