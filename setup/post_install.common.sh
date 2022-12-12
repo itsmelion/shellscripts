@@ -1,14 +1,13 @@
 #!/usr/bin/env zsh
 
 source $HOME/.nvm/nvm.sh # Load NVM to be able to run NPM properly
-npm i -g lion-shellscripts
-npm i -g eslint npm@latest
+git -C=$HOME clone git@github.com:itsmelion/shellscripts.git shellscripts
+LION_SHELL="$HOME/shellscripts"
 
-LION_SHELL="$(npm root -g)/lion-shellscripts"
-
-echo "LION_SHELL='$LION_SHELL'" > $HOME/.zshrc
+echo "export LION_SHELL='$LION_SHELL'" > $HOME/.zshrc
 echo 'source $LION_SHELL/zshconfig.sh' >> $HOME/.zshrc
 
+npm i -g yarn-deduplicate
 # Install core vscode extentions
 code-insiders --install-extension dbaeumer.vscode-eslint
 code-insiders --install-extension EditorConfig.EditorConfig
