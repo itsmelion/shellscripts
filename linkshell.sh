@@ -1,4 +1,4 @@
-LION_SHELL="$(dirname $(realpath $0))"
+LION_SHELL="$HOME/shellscripts"
 echo "Overriding your ZSHRC to $LION_SHELL"
 echo "dont forget your secrets."
 

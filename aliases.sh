@@ -63,7 +63,7 @@ if [[ "`uname`" == "Darwin"* ]]; then
     npm cache verify &
     wait
     npm outdated --location=global
-    softwareupdate --all
+    softwareupdate --download --all
     # flags --download
   }
   # Sketch hack.. (MONTH|DAY|HH|MIN|YY)
