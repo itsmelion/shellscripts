@@ -99,7 +99,12 @@ alias docker-off="sudo systemctl stop docker"
 
 # DEV
 alias peers="npx install-peerdeps"
-alias dedupe="yarn-deduplicate --strategy=highest yarn.lock"
+
+dedupe() {
+  yarn-deduplicate --strategy=highest yarn.lock
+  yarn
+}
+
 publish() {
   local defaultTag='next'
   yarn publish --prerelease --tag ${defaultTag:-$1}
