@@ -9,7 +9,7 @@ echo 'source $LION_SHELL/zshconfig.sh' >> $HOME/.zshrc
 
 npm i -g yarn-deduplicate
 # Install core vscode extentions
-code-insiders --install-extension dbaeumer.vscode-eslint
-code-insiders --install-extension EditorConfig.EditorConfig
-code-insiders --install-extension mikestead.dotenv
-code-insiders --install-extension rebornix.project-snippets
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension EditorConfig.EditorConfig
+code --install-extension mikestead.dotenv
+code --install-extension rebornix.project-snippets
