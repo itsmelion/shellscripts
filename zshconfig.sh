@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # (robbyrussell | agnoster)
-ZSH_THEME="lion"
+ZSH_THEME="robbyrussell"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -37,9 +37,9 @@ export DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # ssh
 export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
-export LANG="en_US.UTF-8"
-export LANGUAGE="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
+# export LANG="en_US.UTF-8"
+# export LANGUAGE="en_US.UTF-8"
+# export LC_ALL="en_US.UTF-8"
 export GPG_TTY=$(tty)
 
 
@@ -47,10 +47,10 @@ export GPG_TTY=$(tty)
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR="rmate"
 else
-  export EDITOR="code-insiders"
+  export EDITOR="code"
 fi
 
-export REACT_EDITOR="code-insiders"
+export REACT_EDITOR="code"
 
 source $LION_SHELL/aliases.sh
 source $HOME/.secrets.sh
@@ -60,18 +60,19 @@ source $ZSH/oh-my-zsh.sh
 if [[ "`uname`" == "Darwin"* ]]; then
   export ANDROID_HOME=$HOME/Library/Android/sdk
 else
-  export ANDROID_HOME=$HOME/Android/Sdk
+  export ANDROID_HOME=$HOME/cmdline-tools
 fi
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/usr/local/opt/openjdk/include"
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+# # export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+# export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+# export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export PATH=$PATH:$JAVA_HOME/bin
+# export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # Ruby
 # export PATH="/usr/local/opt/ruby/bin:$PATH"
@@ -110,10 +111,10 @@ load-nvmrc
 
 # source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
 
 
-plugins=(zsh-syntax-highlighting)
+plugins=(git, zsh-syntax-highlighting)
