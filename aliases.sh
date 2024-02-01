@@ -76,7 +76,6 @@ elif [[ "$(source /etc/os-release && echo $NAME)" == "Ubuntu" ]]; then
 fi
 
 alias upgrade="update"
-alias code="code-insiders"
 alias zshrc="code $LION_SHELL/zshconfig.sh"
 
 j15() { export JAVA_HOME=`/usr/libexec/java_home -v 15`; java -version }
