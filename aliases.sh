@@ -6,12 +6,17 @@ help() {
   echo "OpenSSL is known to fail on macOS. Case that happens, run gem update with the following arguments:"
   echo "gem update --user -- --with-openssl-dir=/usr/local/Cellar/openssl@1.1/1.1.1s"
   echo ""
-  echo "cloneSub <git-repo> <folder-name>   ---> clones repositories with submodules"
-  echo "update-sub                          ---> updates child submodules"
-  echo "find . -name '*.js' -type f -delete ---> find and deletes files recursively"
-  echo "prune SOME_FILE                     ---> find and deletes files recursively"
-  echo "git rm -r --cached .                ---> removes git cache (ignorant files)"
-  echo "'CMD + Shift + .'                   ---> toggle hidden folders on Mac"
+  echo "cloneSub <git-repo> <folder-name>   -> clones repositories with submodules"
+  echo "update-sub                          -> updates child submodules"
+  echo "find . -name '*.js' -type f -delete -> find and deletes files recursively"
+  echo "prune SOME_FILE                     -> find and deletes files recursively"
+  echo "git rm -r --cached .                -> removes git cache (ignorant files)"
+  echo "'CMD + Shift + .'                   -> toggle hidden folders on Mac"
+  echo ""
+  echo "NVM:"
+  echo "nvmInstall arg1(version)            -> install a specific node version"
+  echo "noderange arg1(version)             -> new node version, but uninstalling current"
+  echo "nodeup                              -> upgrade to latest node"
 }
 
 nvmInstall(){
