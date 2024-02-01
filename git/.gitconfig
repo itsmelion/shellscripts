@@ -4,7 +4,7 @@
   signingKey = DD3CBF78AE6C5E602466500692B716531638375E
 
 [core]
-	editor = code-insiders
+	editor = code
   autocrlf = input
 
 [commit]

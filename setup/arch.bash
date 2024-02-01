@@ -22,7 +22,6 @@ gnupg
 
 printf "»  About to install (AUR) packages"
 yay visual-studio-code-bin --noconfirm
-yay visual-studio-code-insiders-bin --noconfirm
 yay gitkraken --noconfirm
 yay insomnia --noconfirm
 yay spotify --noconfirm

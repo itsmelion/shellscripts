@@ -33,7 +33,7 @@ brew install mas
 # brew install cocoapods
 brew install gpg-suite-no-mail
 brew install docker-edge
-brew install visual-studio-code-insiders
+brew install visual-studio-code
 brew install insomnia
 brew install gitkraken
 brew install sketch

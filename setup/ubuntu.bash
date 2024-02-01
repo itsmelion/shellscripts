@@ -66,7 +66,6 @@ installExtras () {
   sudo apt update
   sudo apt install -y \
     code \
-    code-insiders \
     insomnia \
     spotify-client
 

@@ -7,18 +7,19 @@ refreshenv
 
 choco feature enable -n allowGlobalConfirmation
 choco install -y chocolatey-core.extension
-choco install -y nodejs
+# choco install -y nodejs // we use nvm
 choco install -y docker-desktop --pre
 choco install -y googlechrome.canary
-choco install -y powershell.core --pre
+choco install -y googlechrome
+# choco install -y powershell.core --pre
 choco install -y git
 choco install -y openssh
 choco install -y 7zip
 choco install -y curl
 choco install -y wget
 choco install -y gpg4win
-choco install -y yarn
-choco install -y vscode-insiders
+# choco install -y yarn // we use corepack nowadays
+choco install -y vscode
 choco install -y vlc
 choco install -y gitkraken
 choco install -y insomnia-rest-api-client
@@ -27,7 +28,7 @@ choco install -y robo3t
 choco install -y whatsapp
 choco install -y slack
 choco install -y steam-client
-choco install -y thunderbird
+# choco install -y thunderbird
 choco install -y icloud
 
 refreshenv
@@ -35,7 +36,7 @@ refreshenv
 cp ..\git\.gitconfig $HOME
 git config --global user.name "Christhopher Lion"
 git config --global user.email christhopherleao@icloud.com
-git config --global core.editor "code-insiders"
+git config --global core.editor "code"
 cp ..\git\.gitignore $HOME
 git config --global core.excludesfile $HOME\.gitignore
 
@@ -43,3 +44,4 @@ cp ../.editorconfig $HOME
 
 cd $HOME
 echo "https://github.com/randyrants/sharpkeys/releases to map keys to mac"
+echo "check NVM and get a node installation (enable corepack)"
