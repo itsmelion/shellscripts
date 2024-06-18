@@ -17,6 +17,8 @@ help() {
   echo "nvmInstall arg1(version)            -> install a specific node version"
   echo "noderange arg1(version)             -> new node version, but uninstalling current"
   echo "nodeup                              -> upgrade to latest node"
+  echo ""
+  echo "kraken-update                       -> update gitkraken on debian-based OS (wsl)"
 }
 
 nvmInstall(){
@@ -47,6 +49,14 @@ cloneSub() {
   git clone --recursive $1 $2
   cd $2
   git submodule foreach --recursive "git checkout $MAIN"
+}
+
+kraken-update() {
+  wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+  sudo chown -Rv _apt:root ./gitkraken-amd64.deb
+  sudo chmod -Rv 700 ./gitkraken-amd64.deb
+  sudo apt install ./gitkraken-amd64.deb
+  rm ./gitkraken-amd64.deb
 }
 
 if [[ "`uname`" == "Darwin"* ]]; then
