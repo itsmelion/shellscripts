@@ -11,8 +11,6 @@ xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install wget
 brew install coreutils
-brew tap homebrew/cask-versions
-brew tap homebrew/cask-fonts
 brew update
 brew upgrade
 
