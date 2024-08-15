@@ -17,13 +17,14 @@ brew upgrade
 source ./setup/common.sh
 
 # Development Tools
-brew install iterm2-beta
+# brew install iterm2
+brew install --cask iterm2
 brew install node
 brew install git
 brew install watchman
 brew install ctop
 brew install rmate
-brew install yarn
+# brew install yarn
 brew install zsh-syntax-highlighting
 # MAS = Mac App Store Command Line
 brew install mas
@@ -38,8 +39,8 @@ brew install sketch
 
 # Browsers
 brew install google-chrome
-brew install google-chrome-canary
-brew install safari-technology-preview
+# brew install google-chrome-canary
+# brew install safari-technology-preview
 # brew install firefox-developer-edition
 
 brew install java
