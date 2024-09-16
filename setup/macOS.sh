@@ -19,12 +19,12 @@ source ./setup/common.sh
 # Development Tools
 # brew install iterm2
 brew install --cask iterm2
-brew install node
+# brew install node (now we use corepack and NVM)
 brew install git
 brew install watchman
 brew install ctop
 brew install rmate
-# brew install yarn
+# brew install yarn (now we use corepack and NVM)
 brew install zsh-syntax-highlighting
 # MAS = Mac App Store Command Line
 brew install mas
