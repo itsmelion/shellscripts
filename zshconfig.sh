@@ -21,6 +21,7 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=7
 export DISABLE_UPDATE_PROMPT=true
+export NX_DAEMON=false
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -66,11 +67,8 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-# # export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-# export PATH="/usr/local/opt/openjdk/bin:$PATH"
-# export CPPFLAGS="-I/usr/local/opt/openjdk/include"
-# export JAVA_HOME=$(/usr/libexec/java_home)
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH=$PATH:$JAVA_HOME/bin
 # export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 

@@ -64,7 +64,7 @@ if [[ "`uname`" == "Darwin"* ]]; then
     # get updates
     mas upgrade
     brew update &
-    # gem update --user &
+    # sudo gem update --user &
     npm upgrade --location=global &
     wait
     brew upgrade &
