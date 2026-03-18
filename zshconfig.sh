@@ -73,9 +73,14 @@ export PATH=$PATH:$JAVA_HOME/bin
 # export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # Ruby
-# export PATH="/usr/local/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
+# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+# export PATH="/Users/lion/.gem/ruby/3.4.0/bin:$PATH"
+# export LDFLAGS="-L/usr/local/opt/ruby/lib"
+# export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.4.1
 # /Ruby
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@3/lib/pkgconfig"
 

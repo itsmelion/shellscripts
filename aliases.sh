@@ -28,7 +28,6 @@ nvmInstall(){
 noderange() {
   local previous=$(nvm current)
   nvm install $1 --latest-npm --reinstall-packages-from=current
-  nvm uninstall $previous
   nvm cache clear
 }
 
