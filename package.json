@@ -14,7 +14,7 @@
     "linkshell": "linkshell.sh"
   },
   "dependencies": {
-    "handlebars": "4.7.8"
+    "handlebars": "4.7.9"
   },
   "author": {
     "name": "Christhopher Lion",
