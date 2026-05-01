@@ -1,0 +1,11 @@
+# Personal GitHub
+Host personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+# Company GitHub
+Host deltatre
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/d3amaral

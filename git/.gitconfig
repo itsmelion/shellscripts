@@ -1,11 +1,15 @@
 [user]
-	name = Christhopher Lion
+	name = Christhopher Leão
 	email = christhopherleao@icloud.com
-  signingKey = DD3CBF78AE6C5E602466500692B716531638375E
+  signingKey = C2F01FDA04A9B17F26A6B6621BED5B3C80A00A0C
+
+[includeIf "gitdir:~/dev/"]
+  path = ~/dev/.gitconfig
 
 [core]
 	editor = code
   autocrlf = input
+  excludesfile = ~/.gitignore
 
 [commit]
 	gpgsign = true
